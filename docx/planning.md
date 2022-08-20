@@ -1,12 +1,21 @@
-# Website Name
+# Tribal Minds
 (responsive image)
-Click here to view the website (link)
+Click here to view Tribal Minds website (link)
 
 ## Project Purpose
 Expanding on the static website style with basic user interaction & expierience, the website that will be built is going to extend that interaction with funcionality programmed through JS (JavaScript) and external APIs. The intended purpose for the website is for user to access different games on the website either being a mind game or maths game and also to be able to send feedback on the website.
 
 ----
 ## User Stories
+As a user I want to be able to switch between the different web pages so I can navigate easily around the website.
+
+As a user I would like to see the different difficulties of the games so I can choose to play easy, medium or hard difficulty.
+
+As a user I would like to know the different versions of the memory game so I can decide which one I want to play.
+
+As a user I want to read feedback from other users so I can see what the games are like before playing.
+
+As a user I would like to be able to send feedback to the developer so I can give a positive review or some suggestions for future developments.
 
 ----
 ## Features
