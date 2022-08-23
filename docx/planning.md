@@ -42,3 +42,17 @@ As a user I would like to be able to send feedback to the developer so I can giv
 
 ----
 ## Wireframes
+Landing Page
+![landing-page](wireframes/landing-page.png)
+
+About Page
+![contact-page](wireframes/contact-page.png)
+
+Maths Game
+![maths-game](wireframes/maths-game.png)
+
+Memory Game(Circle)
+![memory-game-circle](wireframes/memory-game-circle.png)
+
+Memory Game(Buttons)
+![memory-game-buttons](wireframes/memory-game-buttons.png)
