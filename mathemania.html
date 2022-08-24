@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Tribal Minds</title>
 </head>
-<body>
-    <a href="index.html">Home</a>
 
-    <h1 class="heading">
+<body>
+    <a class="ml-3" href="index.html">Home</a>
+
+    <h1 class="text-center">
         MatheMania
     </h1>
 
-    <div class="game-area">
-        <div class="controls-area">
-            <button>
-                Add
-            </button>
-            <button>
-                Subtract
-            </button>
-            <button>
-                Times
-            </button>
-            <button>
-                Divide
-            </button>
+    <div class="container game-area">
+        <div class="row controls-area">
+            <div class="col-6">
+                <button>
+                    Add
+                </button>
+            </div>
+            <div class="col-6">
+                <button>
+                    Subtract
+                </button>
+            </div>
+            <div class="col-6">
+                <button>
+                    Times
+                </button>
+            </div>
+            <div class="col-6">
+                <button>
+                    Divide
+                </button>
+            </div>
         </div>
         <div class="question-area">
             <span>0</span>
@@ -40,10 +52,11 @@
         <button data-type="submit">Submit Answer</button>
     </div>
 
-    <div class="score-area">
+    <div class="container score-area">
         <p>Correct Answers <span>0</span></p>
         <p>Incorrect Answers <span>0</span></p>
     </div>
-    
+
 </body>
+
 </html>

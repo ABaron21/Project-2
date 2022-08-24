@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+body{
+    font-family: "Josefin Sans", sans-serif;
+    background: #7806d4;
+    background: linear-gradient(90deg, #7806d4 0%, #c109db 50%, #7806d4 100%);
+}
