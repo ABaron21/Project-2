@@ -4,3 +4,30 @@ body{
     background: #7806d4;
     background: linear-gradient(90deg, #7806d4 0%, #c109db 50%, #7806d4 100%);
 }
+
+.navbar, .navbar-nav{
+    background-color: #7806d4;
+    color: #f0ffff;
+}
+.navbar-link{
+    text-decoration: none;
+    color: #f0ffff;
+}
+.index-body{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.hero-img{
+    height: 150px;
+    width: 150px;
+}
+.socials{
+    background-color: #7806d4;
+    width: 100%;
+}
+.social-item{
+    margin: auto;
+}
+.social-item i{
+    color: #f0ffff;
+}
