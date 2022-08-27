@@ -34,6 +34,15 @@ p{
     text-decoration: none;
     color: #f0ffff;
 }
+.navbar-link:hover{
+    color: #fafafa;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+}
+
+.active{
+    border-bottom: 1px solid #fff;
+}
 
 
 .index-body{
@@ -83,9 +92,6 @@ p{
 }
 
 /* --Contact Page-- */
-.about-section{
-    margin: 1em auto;
-}
 
 
 .review-name{
@@ -96,6 +102,20 @@ p{
     margin-bottom: 1em;
 }
 
+.feedback-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .form-field{
     margin: 15px auto;
+}
+
+/* --Media Queries-- */
+@media screen and (max-width:576px) {
+    .navbar-nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
