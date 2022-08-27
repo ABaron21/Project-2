@@ -95,3 +95,7 @@ p{
 .review-text{
     margin-bottom: 1em;
 }
+
+.form-field{
+    margin: 15px auto;
+}

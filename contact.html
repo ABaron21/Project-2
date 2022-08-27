@@ -62,13 +62,15 @@
         <div class="row text-center">
             <div class="review-item col-12">
                 <h4 class="review-name">Name</h4>
-                <p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, nesciunt, omnis tempora temporibus
+                <p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, nesciunt, omnis
+                    tempora temporibus
                     molestiae ab praesentium illum sapiente voluptates cupiditate quod iure, perferendis sit obcaecati
                     aut error! Architecto, nostrum mollitia.</p>
             </div>
             <div class="review-item col-12">
                 <h4 class="review-name">Name</h4>
-                <p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, nesciunt, omnis tempora temporibus
+                <p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, nesciunt, omnis
+                    tempora temporibus
                     molestiae ab praesentium illum sapiente voluptates cupiditate quod iure, perferendis sit obcaecati
                     aut error! Architecto, nostrum mollitia.</p>
             </div>
@@ -76,11 +78,17 @@
         <hr>
 
         <!--Feedback Form-->
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center">Send Feedback</h2>
+                <hr class="block-divider-thin">
+            </div>
+        </div>
         <form action="#">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email Address">
-            <input type="textarea" placeholder="Enter your message" rows="10" cols="40">
-            <input type="submit" value="Send">
+            <div class="col-12 form-field"><input type="text" id="feedback-name" placeholder="Name"></div>
+            <div class="col-12 form-field"><input type="email" id="feedback-email" placeholder="Email Address"></div>
+            <div class="col-12 form-field"><textarea id="feedback-message" placeholder="Enter your message" rows="5" cols="40"></textarea></div>
+            <div class="col-12"><input type="submit" value="Send"></div>
         </form>
     </article>
 
