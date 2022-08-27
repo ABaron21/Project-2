@@ -9,6 +9,10 @@ body{
 }
 h1,h2,h3,h4{
     margin: 0;
+    color: #f0ffff;
+}
+p{
+    color: #f0ffff;
 }
 .block-divider-thin{
     width: 75px;
@@ -36,9 +40,20 @@ h1,h2,h3,h4{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+.jumbotron{
+    background-color: rgba(0, 0, 0, 0.35);  
+}
+.hero-title{
+    margin-bottom: 1rem;
+}
 .hero-img{
     height: 150px;
     width: 150px;
+    border: 1px solid white;
+    border-radius: 12px;
+}
+.preview-title{
+    margin-bottom: 0.5em;
 }
 
 .game-section{
@@ -46,12 +61,10 @@ h1,h2,h3,h4{
 
 }
 .game-title{
-    color: #f0ffff;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 .game-text{
-    color: #f0ffff;
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 1.5em;
