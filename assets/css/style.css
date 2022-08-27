@@ -81,3 +81,17 @@ p{
 .social-item i{
     color: #f0ffff;
 }
+
+/* --Contact Page-- */
+.about-section{
+    margin: 1em auto;
+}
+
+
+.review-name{
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+}
+.review-text{
+    margin-bottom: 1em;
+}
