@@ -12,26 +12,31 @@
 </head>
 
 <body>
-    <a class="ml-3" href="index.html">Home</a>
+    <a class="return-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Home</a>
 
     <h1 class="game-title text-center">
         MatheMania
     </h1>
 
     <div class="container game-area">
+        <div class="row difficulty-area">
+            <div class=""><button class="btn btn--curve">Easy</button></div>
+            <div class=""><button class="btn btn--curve">Medium</button></div>
+            <div class=""><button class="btn btn--curve">Hard</button></div>
+        </div>
         <div class="row controls-area">
-            <div class="col-6"><button class="btn btn--big">
-                <i class="fas fa-plus"></i>
-            </button></div>
-            <div class="col-6"><button class="btn btn--big">
-                <i class="fas fa-minus"></i>
-            </button></div>
-            <div class="col-6"><button class="btn btn--big">
-                <i class="fas fa-times"></i>
-            </button></div>
-            <div class="col-6"><button class="btn btn--big">
-                <i class="fas fa-divide"></i>
-            </button></div>
+            <div class="col-6 col-md-3"><button class="btn btn--big">
+                    <i class="fas fa-plus"></i>
+                </button></div>
+            <div class="col-6 col-md-3"><button class="btn btn--big">
+                    <i class="fas fa-minus"></i>
+                </button></div>
+            <div class="col-6 col-md-3"><button class="btn btn--big">
+                    <i class="fas fa-times"></i>
+                </button></div>
+            <div class="col-6 col-md-3"><button class="btn btn--big">
+                    <i class="fas fa-divide"></i>
+                </button></div>
         </div>
         <div class="question-area">
             <span>0</span>
@@ -40,13 +45,13 @@
             <span>=</span>
             <p>Enter Answer:</p>
             <input type="number">
+            <button data-type="submit">Submit Answer</button>
         </div>
-        <button data-type="submit">Submit Answer</button>
     </div>
 
     <div class="container score-area">
-        <p>Correct Answers <span>0</span></p>
-        <p>Incorrect Answers <span>0</span></p>
+        <p>Correct Answers: <span>0</span></p>
+        <p>Incorrect Answers: <span>0</span></p>
     </div>
 
     <!--Scripts-->
