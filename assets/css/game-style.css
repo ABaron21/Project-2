@@ -30,10 +30,11 @@ p,span,i{
     transition: all 0.5s;
 }
 .btn--curve{
-    border: 2.5px solid;
+    border: 2.5px solid black;
     border-radius: 12px;
     font-size: 1rem;
     margin: 10px 20px;
+    color: #f0ffff;
 }
 
 /* --MatheMania-- */
@@ -100,4 +101,12 @@ p,span,i{
     left: 120px;
     top: 110px;
     background-color: #6a5acd;
+}
+.circle-controls{
+    position: absolute;
+    top: 600px;
+}
+.btn-newgame{
+    margin: 20px auto;
+    font-size: 1.5rem;
 }
