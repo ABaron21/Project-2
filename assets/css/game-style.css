@@ -19,7 +19,7 @@ p,span,i{
     color: #f0ffff;
     margin-left: 10px;
 }
-.btn--big {
+.btn--med {
     padding-top: 10px;
     border-radius: 50%;
     border: 10px solid;
@@ -28,6 +28,15 @@ p,span,i{
     font-size: 3.2rem;
     margin: 15px 30px;
     transition: all 0.5s;
+}
+.btn--big {
+    padding-top: 10px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    border: 5px solid;
+    width: 125px;
+    height: 125px;
+    margin: 15px 30px;
 }
 .btn--curve{
     border: 2.5px solid black;
@@ -123,4 +132,8 @@ p,span,i{
 .btn-newgame{
     margin: 20px auto;
     font-size: 1.5rem;
+}
+.button-area{
+    padding-right: 35px;
+    margin-top: 25px;
 }
