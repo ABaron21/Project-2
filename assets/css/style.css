@@ -99,6 +99,22 @@ p{
     color: #f0ffff;
 }
 
+.mathemania-form img{
+    width: 400px;
+    height: 200px;
+    margin-left: 30px;
+}
+.diff-selector{
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.diff-selector input{
+    margin-right: 25px;
+}
+.memorymania-form img{
+    width: 220px;
+    height: 150px;
+}
 /* --Contact Page-- */
 
 

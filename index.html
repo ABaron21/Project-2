@@ -28,8 +28,7 @@
                     <a href="contact.html" class="navbar-link">Contact</a>
                 </li>
                 <li class="navbar-item mr-3">
-                    <a href="#" class="navbar-link" data-toggle="modal"
-                    data-target="#signInModal">Sign In</a>
+                    <a href="#" class="navbar-link" data-toggle="modal" data-target="#signInModal">Sign In</a>
                 </li>
             </ul>
         </div>
@@ -64,7 +63,7 @@
                     iste quod possimus
                     placeat ex libero nihil voluptate vel doloremque excepturi nemo tenetur reprehenderit ipsum maxime
                     asperiores, necessitatibus autem.</p>
-                <a href="mathemania.html" class="btn btn-dark">Play</a>
+                <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#math-game">Play</a>
             </div>
             <div class="col-12 col-md-6 game-section text-center">
                 <h3 class="game-title">MemoryMania</h3>
@@ -73,7 +72,7 @@
                     iste quod possimus
                     placeat ex libero nihil voluptate vel doloremque excepturi nemo tenetur reprehenderit ipsum maxime
                     asperiores, necessitatibus autem.</p>
-                <a href="memorybuttons.html" class="btn btn-dark">Play</a>
+                <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#memory-game">Play</a>
             </div>
         </div>
     </article>
@@ -93,110 +92,181 @@
     </footer>
 
     <!--Modals from Bootstrap libaries-->
-        <!--Modal that allows users to sign up with an email and password-->
-        <div class="modal" tabindex="-1" role="dialog" id="signUpModal">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Sign Up to Tribal Minds</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="email">Email address</label>
-                                <input type="email" class="form-control" id="email"
-                                    aria-describedby="emailHelp" placeholder="Enter email" required>
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                    else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password"
-                                    placeholder="Password" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="confirm-password">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirm-password"
-                                    placeholder="Password" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#signedUp">Submit</button>
-                        </form>
-                    </div>
+    <!--Modal that allows users to sign up with an email and password-->
+    <div class="modal" tabindex="-1" role="dialog" id="signUpModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up to Tribal Minds</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                placeholder="Enter email" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirm-password" placeholder="Password"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-dark" data-dismiss="modal" data-toggle="modal"
+                            data-target="#signedUp">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
-        <!--Modal that allows users to sign in with the email and password they created an account with-->
-        <div class="modal" tabindex="-1" role="dialog" id="signInModal">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Sign In</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="Enter email">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                    placeholder="Password" required>
-                            </div>
-                            <div class="form-group">
-                                <small class="form-text text-muted" data-dismiss="modal" data-toggle="modal" data-target="#signUpModal">Don't have an account? Sign up now!</small>
-                            </div>
-                            <button type="submit" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#signedIn">Login</button>
-                        </form>
-                    </div>
+    </div>
+    <!--Modal that allows users to sign in with the email and password they created an account with-->
+    <div class="modal" tabindex="-1" role="dialog" id="signInModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <small class="form-text text-muted" data-dismiss="modal" data-toggle="modal"
+                                data-target="#signUpModal">Don't have an account? Sign up now!</small>
+                        </div>
+                        <button type="submit" class="btn btn-dark" data-dismiss="modal" data-toggle="modal"
+                            data-target="#signedIn">Login</button>
+                    </form>
                 </div>
             </div>
         </div>
-        <!--Signed up confirmation-->
-        <div class="modal" tabindex="-1" role="dialog" id="signedUp">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Thank You for Signing Up!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <h6>You have successfully signed up to Tribal Minds</h6>
-                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Close</button>
-                        </form>
-                    </div>
+    </div>
+    <!--Signed up confirmation-->
+    <div class="modal" tabindex="-1" role="dialog" id="signedUp">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thank You for Signing Up!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <h6>You have successfully signed up to Tribal Minds</h6>
+                        <button type="submit" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    </form>
                 </div>
             </div>
         </div>
-        <!--Signed in confirmation-->
-        <div class="modal" tabindex="-1" role="dialog" id="signedIn">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Welcome Back!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <h6>You have successfully logged in!</h6>
-                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Close</button>
-                        </form>
-                    </div>
+    </div>
+    <!--Signed in confirmation-->
+    <div class="modal" tabindex="-1" role="dialog" id="signedIn">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Welcome Back!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <h6>You have successfully logged in!</h6>
+                        <button type="submit" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+    <!--MatheMania-->
+    <div class="modal" tabindex="-1" role="dialog" id="math-game">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Play MatheMania!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="mathemania-form">
+                        <img src="assets/images/mathemania.PNG" alt="MatheMania Preview">
+                        <div class="diff-selector">
+                            <label for="easy-difficulty">Easy</label>
+                            <input type="checkbox" name="easy-difficulty" id="easy-difficulty">
+                            <label for="medium-difficulty">Medium</label>
+                            <input type="checkbox" name="medium-difficulty" id="medium-difficulty">
+                            <label for="hard-difficulty">Hard</label>
+                            <input type="checkbox" name="hard-difficulty" id="hard-difficulty">
+                        </div>
+                        <hr>
+                        <a href="mathemania.html" class="btn btn-dark">Play</a>
+                        <button type="submit" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MemoryMania-->
+    <div class="modal" tabindex="-1" role="dialog" id="memory-game">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Play MemoryMania!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="memorymania-form">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="assets/images/memorycircle.PNG" alt="MemoryMania(Circle) Preview">
+                                <label for="memorycircle">Circles</label>
+                                <input type="checkbox" name="memorycircle" id="circle-edition">
+                            </div>
+                            <div class="col-6">
+                                <img src="assets/images/memorybuttons.PNG" alt="MemoryMania(Buttons) Preview">
+                                <label for="memorybutton">Buttons</label>
+                                <input type="checkbox" name="memorybutton" id="button-edition">
+                            </div>
+                        </div>
+                        <div class="diff-selector">
+                            <label for="easy-difficulty">Easy</label>
+                            <input type="checkbox" name="easy-difficulty" id="easy-difficulty">
+                            <label for="medium-difficulty">Medium</label>
+                            <input type="checkbox" name="medium-difficulty" id="medium-difficulty">
+                            <label for="hard-difficulty">Hard</label>
+                            <input type="checkbox" name="hard-difficulty" id="hard-difficulty">
+                        </div>
+                        <hr>
+                        <a href="#" class="btn btn-dark">Play</a>
+                        <button type="submit" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Scripts-->
     <script src="https://kit.fontawesome.com/aa35820a25.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
