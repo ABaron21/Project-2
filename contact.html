@@ -28,7 +28,8 @@
                     <a href="contact.html" class="active navbar-link">Contact</a>
                 </li>
                 <li class="navbar-item mr-3">
-                    <a href="#" class="navbar-link">Sign In</a>
+                    <a href="#" class="navbar-link" data-toggle="modal"
+                    data-target="#signInModal">Sign In</a>
                 </li>
             </ul>
         </div>
@@ -99,7 +100,7 @@
                 </div>
                 <div class="col-12 form-field"><textarea id="feedback-message" placeholder="Enter your message" rows="5"
                         cols="40"></textarea></div>
-                <div class="col-12"><input type="submit" value="Send"></div>
+                <div class="col-12"><input type="submit" value="Send" class="btn btn-dark"></div>
             </form>
         </div>
     </article>
@@ -118,6 +119,111 @@
         </div>
     </footer>
 
+        <!--Modals from Bootstrap libaries-->
+        <!--Modal that allows users to sign up with an email and password-->
+        <div class="modal" tabindex="-1" role="dialog" id="signUpModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sign Up to Tribal Minds</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email"
+                                    aria-describedby="emailHelp" placeholder="Enter email" required>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirm-password"
+                                    placeholder="Password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#signedUp">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Modal that allows users to sign in with the email and password they created an account with-->
+        <div class="modal" tabindex="-1" role="dialog" id="signInModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sign In</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <small class="form-text text-muted" data-dismiss="modal" data-toggle="modal" data-target="#signUpModal">Don't have an account? Sign up now!</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#signedIn">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Signed up confirmation-->
+        <div class="modal" tabindex="-1" role="dialog" id="signedUp">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Thank You for Signing Up!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <h6>You have successfully signed up to Tribal Minds</h6>
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Signed in confirmation-->
+        <div class="modal" tabindex="-1" role="dialog" id="signedIn">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Welcome Back!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <h6>You have successfully logged in!</h6>
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     <!--Scripts-->
     <script src="https://kit.fontawesome.com/aa35820a25.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
