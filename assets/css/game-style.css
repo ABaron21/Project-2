@@ -264,4 +264,14 @@ p,span,i{
         top: 650px;
         left: 375px;
     }
+    /* MemoryButton */
+    .buttons-title{
+        font-size: 5.5em;
+    }
+    .button-area{
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-top: 1em;
+        margin-left: 500px;
+    }
 }
