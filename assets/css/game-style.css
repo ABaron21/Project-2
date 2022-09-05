@@ -52,7 +52,7 @@ p,span,i{
     font-size: 3.5em;
 }
 .difficulty-area{
-    margin-left: 20px;
+    justify-content: center;
 }
 .game-area{
     margin-top: 1em;
@@ -136,4 +136,32 @@ p,span,i{
 .button-area{
     padding-right: 35px;
     margin-top: 25px;
+}
+
+/* --Media Queries-- */
+@media screen and (min-width: 768px) {
+    .return-link{
+        font-size: 25px;
+    }
+    .game-title{
+        font-size: 5em;
+    }
+    .difficulty-area{
+        margin-bottom: 10px;
+    }
+    .btn--med{
+        height: 110px;
+        width: 110px;
+        padding-top: 12px;
+        margin: 20px 30px;
+    }
+    .difficulty-area button{
+        font-size: 24px;
+    }
+    .question-area span, p{
+        font-size: 30px;
+    }
+    .question-area input, button{
+        font-size: 20px;
+    }
 }
