@@ -214,6 +214,13 @@ p,span,i{
         top: 620px;
         left: 40px;
     }
+    /* MemoryButton */
+    .button-area{
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-top: 1em;
+        margin-left: 110px;
+    }
 }
 @media screen and (min-width: 1440px) {
     /* MatheMania */
@@ -235,6 +242,13 @@ p,span,i{
     .circle-controls{
         top: 620px;
         left: 150px;
+    }
+    /* MemoryButton */
+    .button-area{
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-top: 1em;
+        margin-left: 260px;
     }
 }
 @media screen and (min-width: 1920px) {
