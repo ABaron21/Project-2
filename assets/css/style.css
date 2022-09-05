@@ -50,24 +50,32 @@ p{
     padding-bottom: 2rem;
 }
 .jumbotron{
-    background-color: rgba(0, 0, 0, 0.35);  
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 100%;  
 }
 .hero-title{
-    margin-bottom: 1rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 .hero-img{
     height: 150px;
-    width: 150px;
+    width: 300px;
+    margin-top: 20px;
     border: 1px solid white;
     border-radius: 12px;
+}
+.hero-one{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.hero-two{
+    text-align: center;
 }
 .preview-title{
     margin-bottom: 0.5em;
 }
-
 .game-section{
     margin-bottom: 20px;
-
 }
 .game-title{
     margin-top: 0.5em;
@@ -117,5 +125,18 @@ p{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .hero-content{
+        display: flex;
+        text-align: center;
+    }
+    .hero-one{
+        margin-left: 50px;
+    }
+    .hero-two{
+        margin-top: 25px;
+        margin-left: 180px;
     }
 }
