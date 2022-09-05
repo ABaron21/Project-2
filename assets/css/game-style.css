@@ -181,6 +181,7 @@ p,span,i{
     }
 }
 @media screen and (min-width: 1024px) {
+    /* MatheMania */
     .score-area{
         display: flex;
         align-content: center;
@@ -189,13 +190,34 @@ p,span,i{
     .score-area p{
         margin: 15px 15px;
     }
+    /* MemoryCircle */
+    .circle-area{
+        margin: 30px 310px;
+    }
+    .circle-controls{
+        top: 620px;
+        left: 40px;
+    }
 }
 @media screen and (min-width: 1440px) {
+    /* MatheMania */
     .btn--med{
         margin: 30px 60px;
     }
     .game-title{
         font-size: 6.5em;
         margin-top: 0.5em;
+    }
+    /* MemoryCircle */
+    .circle-title{
+        margin-top: 0.5em;
+        font-size: 4em;
+    }
+    .circle-area{
+        margin: 30px 520px;
+    }
+    .circle-controls{
+        top: 620px;
+        left: 150px;
     }
 }
