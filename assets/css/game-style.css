@@ -221,3 +221,17 @@ p,span,i{
         left: 150px;
     }
 }
+@media screen and (min-width: 1920px) {
+    /* MemoryCircle */
+    .circle-title{
+        margin-top: 0.5em;
+        font-size: 5.2em;
+    }
+    .circle-area{
+        margin: 30px 750px;
+    }
+    .circle-controls{
+        top: 650px;
+        left: 375px;
+    }
+}
