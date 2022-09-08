@@ -1,24 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
-body{
+
+body {
     font-family: "Josefin Sans", sans-serif;
     background: #7806d4;
     background: linear-gradient(90deg, #7806d4 0%, #c109db 50%, #7806d4 100%);
 }
+
 .uppercase {
     text-transform: uppercase;
 }
-h1,h2,h3,h4,h5{
+
+h1,
+h2,
+h3,
+h4,
+h5 {
     margin: 0;
     color: #f0ffff;
 }
-p,span,i{
+
+p,
+span,
+i {
     color: #f0ffff;
 }
-.return-link{
+
+.return-link {
     text-decoration: none;
     color: #f0ffff;
     margin-left: 10px;
 }
+
 .btn--med {
     padding-top: 10px;
     border-radius: 50%;
@@ -29,6 +41,7 @@ p,span,i{
     margin: 15px 30px;
     transition: all 0.5s;
 }
+
 .btn--big {
     padding-top: 10px;
     border-radius: 50%;
@@ -38,7 +51,8 @@ p,span,i{
     height: 125px;
     margin: 15px 30px;
 }
-.btn--curve{
+
+.btn--curve {
     border: 2.5px solid black;
     border-radius: 12px;
     font-size: 1rem;
@@ -47,70 +61,83 @@ p,span,i{
 }
 
 /* --MatheMania-- */
-.game-title{
+.game-title {
     margin-top: 1em;
     font-size: 3.5em;
 }
-.difficulty-area{
+
+.difficulty-area {
     justify-content: center;
 }
-.game-area{
+
+.game-area {
     margin-top: 1em;
 }
-.controls-area{
+
+.controls-area {
     margin-left: auto;
 }
-.question-area{
+
+.question-area {
     margin-top: 2.5em;
     text-align: center;
 }
-.question-area span,p{
+
+.question-area span,
+p {
     font-size: 24px;
 }
-.score-area{
+
+.score-area {
     text-align: center;
     margin-top: 2.5em;
 }
 
 /* --MemoryMania-- */
-.circle-area{
+.circle-area {
     position: relative;
     width: 375px;
     margin: 20px 10px;
     text-align: center;
 }
+
 .circle {
     border: 2.5px solid;
     border-radius: 50%;
     position: absolute;
     cursor: pointer;
 }
-.circle-one{
+
+.circle-one {
     width: 375px;
     height: 375px;
     background-color: #00ffff;
 }
-.circle-two{
+
+.circle-two {
     width: 300px;
     height: 300px;
     left: 53px;
     top: 40px;
     background-color: #dc143c;
 }
-.circle-three{
+
+.circle-three {
     width: 225px;
     height: 225px;
     left: 90px;
     top: 77px;
     background-color: #ff00ff;
 }
-.circle-four{
+
+.circle-four {
     width: 150px;
     height: 150px;
     left: 127px;
     top: 115px;
     background-color: #6a5acd;
 }
+
 .scorebox {
     border-radius: 25%;
     box-sizing: border-box;
@@ -125,153 +152,231 @@ p,span,i{
     font-size: 2em;
     padding-top: 5px;
 }
-.circle-controls{
+
+.circle-controls {
     position: absolute;
     top: 600px;
 }
-.btn-newgame{
+
+.btn-newgame {
     margin: 20px auto;
     font-size: 1.5rem;
     background-color: #f0ffff;
     color: #000000;
 }
-.buttons-title{
+
+.buttons-title {
     margin-top: 0.5em;
     font-size: 3em;
 }
-.button-area{
+
+.button-area {
     padding-right: 35px;
     margin-top: 25px;
 }
 
+.button-score {
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: #f0ffff;
+    height: 75px;
+    width: 75px;
+    top: 270px;
+    left: 170px;
+    text-align: center;
+    color: #000000;
+    font-size: 2.5em;
+    padding-top: 11px;
+}
+
 /* --Media Queries-- */
 @media screen and (min-width: 768px) {
+
     /* MatheMania */
-    .return-link{
+    .return-link {
         font-size: 25px;
     }
-    .game-title{
+
+    .game-title {
         font-size: 5em;
     }
-    .difficulty-area{
+
+    .difficulty-area {
         margin-bottom: 10px;
     }
-    .btn--med{
+
+    .btn--med {
         height: 110px;
         width: 110px;
         padding-top: 12px;
         margin: 20px 30px;
     }
-    .difficulty-area button{
+
+    .difficulty-area button {
         font-size: 24px;
     }
-    .question-area span, p{
+
+    .question-area span,
+    p {
         font-size: 30px;
     }
-    .question-area input, button{
+
+    .question-area input,
+    button {
         font-size: 20px;
     }
+
     /* MemoryCircle */
-    .circle-title{
+    .circle-title {
         margin-top: 0.5em;
         font-size: 3.5em;
     }
-    .circle-area{
+
+    .circle-area {
         margin: 30px 175px;
     }
-    .circle-controls{
+
+    .circle-controls {
         top: 620px;
         left: 20px;
     }
+
     /* MemoryButton */
-    .buttons-title{
+    .buttons-title {
         font-size: 4em;
     }
-    .button-area{
+
+    .button-area {
         padding-right: 0;
         margin-top: 1em;
-        margin-left: 90px;
+        margin-left: 100px;
     }
-    .button-controls{
+
+    .button-controls {
         margin-top: 15px;
     }
+
+    .button-score {
+        left: 345px;
+        top: 295px;
+        height: 90px;
+        width: 90px;
+        font-size: 3em;
+        padding-top: 12px;
+    }
 }
+
 @media screen and (min-width: 1024px) {
+
     /* MatheMania */
-    .score-area{
+    .score-area {
         display: flex;
         align-content: center;
         justify-content: center;
     }
-    .score-area p{
+
+    .score-area p {
         margin: 15px 15px;
     }
+
     /* MemoryCircle */
-    .circle-area{
+    .circle-area {
         margin: 30px 310px;
     }
-    .circle-controls{
+
+    .circle-controls {
         top: 620px;
         left: 40px;
     }
+
     /* MemoryButton */
-    .button-area{
+    .button-area {
         padding-left: 100px;
         padding-right: 100px;
         margin-top: 1em;
         margin-left: 110px;
     }
+    .button-score {
+        left: 445px;
+        top: 295px;
+    }
 }
+
 @media screen and (min-width: 1440px) {
+
     /* MatheMania */
-    .btn--med{
+    .btn--med {
         margin: 30px 60px;
     }
-    .game-title{
+
+    .game-title {
         font-size: 6.5em;
         margin-top: 0.5em;
     }
+
     /* MemoryCircle */
-    .circle-title{
+    .circle-title {
         margin-top: 0.5em;
         font-size: 4em;
     }
-    .circle-area{
+
+    .circle-area {
         margin: 30px 520px;
     }
-    .circle-controls{
+
+    .circle-controls {
         top: 620px;
         left: 150px;
     }
+
     /* MemoryButton */
-    .button-area{
+    .button-area {
         padding-left: 100px;
         padding-right: 100px;
         margin-top: 1em;
         margin-left: 260px;
     }
+    .button-score {
+        left: 650px;
+        top: 350px;
+        height: 100px;
+        width: 100px;
+        font-size: 3.5em;
+        padding-top: 14px;
+    }
 }
+
 @media screen and (min-width: 1920px) {
+
     /* MemoryCircle */
-    .circle-title{
+    .circle-title {
         margin-top: 0.5em;
         font-size: 5.2em;
     }
-    .circle-area{
+
+    .circle-area {
         margin: 30px 750px;
     }
-    .circle-controls{
+
+    .circle-controls {
         top: 650px;
         left: 375px;
     }
+
     /* MemoryButton */
-    .buttons-title{
+    .buttons-title {
         font-size: 5.5em;
     }
-    .button-area{
+
+    .button-area {
         padding-left: 100px;
         padding-right: 100px;
         margin-top: 1em;
         margin-left: 500px;
+    }
+    .button-score {
+        left: 885px;
+        top: 410px;
     }
 }
