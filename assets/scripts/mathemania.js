@@ -1,13 +1,45 @@
-function addition(num1, num2){
-    return num1 + num2;
+let game = {
+    gameType: "",
+    difficulty: "",
+    operand1: 0,
+    operand2: 0,
+    correct: 0,
+    incorrect: 0
 }
-function subtraction(num3, num4){
-    return num3 - num4;
+
+function diff_setter(mode){
+    if(mode == "easy"){
+        game.difficulty = "easy";
+        game.operand1 = Math.floor(Math.random() * 25) + 1;
+        game.operand2 = Math.floor(Math.random() * 25) + 1;
+    } else if(mode == "medium"){
+        game.difficulty = "medium";
+        game.operand1 = Math.floor(Math.random() * 50) + 1;
+        game.operand2 = Math.floor(Math.random() * 50) + 1;
+    } else if (mode == "hard"){
+        game.difficulty = "hard";
+        game.operand1 = Math.floor(Math.random() * 100) + 1;
+        game.operand2 = Math.floor(Math.random() * 100) + 1;
+    }
 }
-function multiply(num5, num6){
-    return num5*num6;
+
+function calculator(type, num1, num2){
+    switch (type){
+        case "add":
+            return num1 + num2;
+            break;
+        case "subtract":
+            return num1 - num2;
+            break;
+        case "multiply":
+            return num1 * num2;
+            break;
+        case "divide":
+            return num1 / num2;
+            break;
+        default:
+            return "No game type selected";
+    }
 }
-function division(num7, num8){
-    return num7/num8;
-}
-module.exports = {addition, subtraction, multiply, division};
+
+module.exports = {calculator, game, diff_setter};
