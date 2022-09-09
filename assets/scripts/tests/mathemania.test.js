@@ -1,4 +1,8 @@
-const {calculator, game, diff_setter} = require("../mathemania");
+const {calculator, game, diff_setter, currentGame} = require("../mathemania");
+
+beforeEach(()=>{
+    document.body.innerHTML = "<span id='operand1'>0</span><span id='operator'>x</span><span id='operand2'>0</span>";
+})
 
 describe("Calculator", () => {
     describe("Addition function", () => {
@@ -37,16 +41,16 @@ describe("Calculator", () => {
 
 describe("Game properties", ()=>{
     test("Game type key exists", ()=>{
-        expect("gameType" in game).toEqual(true);
+        expect("gameType" in currentGame).toEqual(true);
     })
     test("Difficulty key exists", ()=>{
-        expect("difficulty" in game).toEqual(true);
+        expect("difficulty" in currentGame).toEqual(true);
     })
     test("Correct answers key exists", ()=>{
-        expect("correct" in game).toEqual(true);
+        expect("correct" in currentGame).toEqual(true);
     })
     test("Incorrect answers key exists", ()=>{
-        expect("incorrect" in game).toEqual(true);
+        expect("incorrect" in currentGame).toEqual(true);
     })
 })
 
@@ -54,12 +58,12 @@ describe("Easy difficulty", ()=>{
     beforeAll(()=>{
         diff_setter("easy");
     })
-    test("Easy sets num 1 & 2 between 1-25", ()=>{
-        expect(game.operand1).toBeGreaterThan(0);
-        expect(game.operand2).toBeGreaterThan(0);
+    test("Easy sets factor 1 & 2 to 25", ()=>{
+        expect(currentGame.factor1).toBe(25);
+        expect(currentGame.factor2).toBe(25);
     })
     test("Difficulty key set to easy", ()=>{
-        expect(game.difficulty).toEqual("easy");
+        expect(currentGame.difficulty).toEqual("easy");
     })
 })
 
@@ -67,12 +71,12 @@ describe("Medium difficulty", ()=>{
     beforeAll(()=>{
         diff_setter("medium");
     })
-    test("Medium sets num 1 & 2 between 1-50", ()=>{
-        expect(game.operand1).toBeGreaterThan(0);
-        expect(game.operand2).toBeGreaterThan(0);
+    test("Medium sets factor 1 & 2 to 50", ()=>{
+        expect(currentGame.factor1).toBe(50);
+        expect(currentGame.factor2).toBe(50);
     })
     test("Difficulty key set to medium", ()=>{
-        expect(game.difficulty).toEqual("medium");
+        expect(currentGame.difficulty).toEqual("medium");
     })
 })
 
@@ -80,11 +84,39 @@ describe("Hard difficulty", ()=>{
     beforeAll(()=>{
         diff_setter("hard");
     })
-    test("Hard sets num 1 & 2 between 1-100", ()=>{
-        expect(game.operand1).toBeGreaterThan(0);
-        expect(game.operand2).toBeGreaterThan(0);
+    test("Hard sets factor 1 & 2 to 100", ()=>{
+        expect(currentGame.factor1).toBe(100);
+        expect(currentGame.factor2).toBe(100);
     })
     test("Difficulty key set to hard", ()=>{
-        expect(game.difficulty).toEqual("hard");
+        expect(currentGame.difficulty).toEqual("hard");
+    })
+})
+
+describe("Setting game", ()=>{
+    beforeAll(()=>{
+        diff_setter("easy");
+    })
+    describe("Adding values to operand 1 & 2", ()=>{
+        test("operand 1 & 2 aren't null", ()=>{
+            game();
+            expect(currentGame.operand1).toBeGreaterThan(0);
+            expect(currentGame.operand2).toBeGreaterThan(0);
+        })
+    })
+    describe("Setting the correct operator for the game type", ()=>{
+        test("Game type to be 'add'", ()=>{
+            game("add");
+            expect(currentGame.gameType).toBe("add");
+        })
+    })
+})
+
+describe("Displaying components in the DOM", ()=>{
+    test("expects question spans to change", () =>{
+        game("easy");
+        expects(document.getElementById("operand1").innerHTML).toBeGreaterThan(0);
+        expects(document.getElementById("operand2").innerHTML).toBeGreaterThan(0);
+        expects(document.getElementById("operator").innerHTML).toEqual("+");
     })
 })

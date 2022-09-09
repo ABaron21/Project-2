@@ -1,7 +1,9 @@
-let game = {
+let currentGame = {
     gameType: "",
     difficulty: "",
+    factor1: 0,
     operand1: 0,
+    factor2: 0,
     operand2: 0,
     correct: 0,
     incorrect: 0
@@ -9,21 +11,21 @@ let game = {
 
 function diff_setter(mode){
     if(mode == "easy"){
-        game.difficulty = "easy";
-        game.operand1 = Math.floor(Math.random() * 25) + 1;
-        game.operand2 = Math.floor(Math.random() * 25) + 1;
+        currentGame.difficulty = "easy";
+        currentGame.factor1 = 25;
+        currentGame.factor2 = 25;
     } else if(mode == "medium"){
-        game.difficulty = "medium";
-        game.operand1 = Math.floor(Math.random() * 50) + 1;
-        game.operand2 = Math.floor(Math.random() * 50) + 1;
+        currentGame.difficulty = "medium";
+        currentGame.factor1 = 50;
+        currentGame.factor2 = 50;
     } else if (mode == "hard"){
-        game.difficulty = "hard";
-        game.operand1 = Math.floor(Math.random() * 100) + 1;
-        game.operand2 = Math.floor(Math.random() * 100) + 1;
+        currentGame.difficulty = "hard";
+        currentGame.factor1 = 100;
+        currentGame.factor2 = 100;
     }
 }
 
-function calculator(type, num1, num2){
+function calculator(type,num1,num2){
     switch (type){
         case "add":
             return num1 + num2;
@@ -42,4 +44,10 @@ function calculator(type, num1, num2){
     }
 }
 
-module.exports = {calculator, game, diff_setter};
+function game(mode){
+    currentGame.gameType = mode;
+    currentGame.operand1 = Math.floor(Math.random() * currentGame.factor1) + 1;
+    currentGame.operand2 = Math.floor(Math.random() * currentGame.factor2) + 1;
+}
+
+module.exports = {calculator, currentGame, diff_setter, game};
