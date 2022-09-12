@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-
+    diff_setter("easy")
     game("add");
 });
 
