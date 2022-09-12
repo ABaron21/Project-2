@@ -60,6 +60,11 @@ i {
     color: #f0ffff;
 }
 
+.btn--active{
+    background-color: #f0ffff;
+    color: #000000;
+}
+
 /* --MatheMania-- */
 .game-title {
     margin-top: 1em;

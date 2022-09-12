@@ -20,21 +20,21 @@
 
     <div class="container game-area">
         <div class="row difficulty-area">
-            <div class=""><button class="btn btn--curve" onclick="diff_setter('easy')">Easy</button></div>
-            <div class=""><button class="btn btn--curve" onclick="diff_setter('medium')">Medium</button></div>
-            <div class=""><button class="btn btn--curve" onclick="diff_setter('hard')">Hard</button></div>
+            <div class=""><button class="btn btn--curve" id="easy-btn" onclick="diff_setter('easy')">Easy</button></div>
+            <div class=""><button class="btn btn--curve" id="medium-btn" onclick="diff_setter('medium')">Medium</button></div>
+            <div class=""><button class="btn btn--curve" id="hard-btn" onclick="diff_setter('hard')">Hard</button></div>
         </div>
         <div class="row controls-area">
-            <div class="col-6 col-md-3"><button data-type="add" class="btn btn--med">
+            <div class="col-6 col-md-3"><button data-type="add" id="add-btn" class="btn btn--med">
                     <i class="fas fa-plus"></i>
                 </button></div>
-            <div class="col-6 col-md-3"><button data-type="subtract" class="btn btn--med">
+            <div class="col-6 col-md-3"><button data-type="subtract" id="sub-btn" class="btn btn--med">
                     <i class="fas fa-minus"></i>
                 </button></div>
-            <div class="col-6 col-md-3"><button data-type="multiply" class="btn btn--med">
+            <div class="col-6 col-md-3"><button data-type="multiply" id="multi-btn" class="btn btn--med">
                     <i class="fas fa-times"></i>
                 </button></div>
-            <div class="col-6 col-md-3"><button data-type="divide" class="btn btn--med">
+            <div class="col-6 col-md-3"><button data-type="divide" id="divide-btn" class="btn btn--med">
                     <i class="fas fa-divide"></i>
                 </button></div>
         </div>
@@ -56,6 +56,7 @@
 
     <!--Scripts-->
     <script src="assets/scripts/mathemania.js"></script>
+    <script src="assets/scripts/index.js"></script>
     <script src="https://kit.fontawesome.com/aa35820a25.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

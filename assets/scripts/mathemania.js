@@ -11,7 +11,12 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-    diff_setter("easy")
+    diff_setter("easy");
+    document.getElementById('answer-box').addEventListener("keydown", function(event) {
+        if(event.key === "Enter"){
+            checkAnswer();
+        }
+    })
     game("add");
 });
 
@@ -24,23 +29,30 @@ let currentGame = {
 
 function diff_setter(mode){
     if(mode == "easy"){
-        currentGame.difficulty = "easy";
         currentGame.factor1 = 25;
         currentGame.factor2 = 25;
+        $("#easy-btn").addClass("btn--active");
+        $("#medium-btn").removeClass("btn--active");
+        $("#hard-btn").removeClass("btn--active");
     } else if(mode == "medium"){
-        currentGame.difficulty = "medium";
         currentGame.factor1 = 50;
         currentGame.factor2 = 50;
+        $("#easy-btn").removeClass("btn--active");
+        $("#medium-btn").addClass("btn--active");
+        $("#hard-btn").removeClass("btn--active");
     } else if (mode == "hard"){
-        currentGame.difficulty = "hard";
         currentGame.factor1 = 100;
         currentGame.factor2 = 100;
+        $("#easy-btn").removeClass("btn--active");
+        $("#medium-btn").removeClass("btn--active");
+        $("#hard-btn").addClass("btn--active");
     }
 }
 
 
 function game(mode){
-    currentGame.gameType = mode;
+    document.getElementById('answer-box').value = "";
+    document.getElementById('answer-box').focus();
     let num1 = Math.floor(Math.random() * currentGame.factor1) + 1;
     let num2 = Math.floor(Math.random() * currentGame.factor2) + 1;
 
@@ -50,6 +62,8 @@ function game(mode){
         displayMultiplication(num1, num2);
     }else if(mode === "subtract"){
         displaySubtraction(num1, num2);
+    }else if(mode === "divide"){
+        displayDivision(num1,num2);
     }
 }
 
@@ -77,6 +91,8 @@ function calculateCorrectAnswer() {
         return [operand1 * operand2, "multiply"]
     }else if(operator === "-"){
         return [operand1 - operand2, "subtract"]
+    }else if(operator === "/"){
+        return [operand1/operand2, "divide"]
     }
 }
 
@@ -106,4 +122,14 @@ function displayMultiplication(operand1, operand2){
     document.getElementById('operator').innerHTML = "x";
 }
 
-module.exports = {calculator, currentGame, diff_setter, game};
+function displayDivision(operand1, operand2){
+    let numOne = operand1 > operand2 ? operand1 : operand2;
+	let numTwo = operand1 > operand2 ? operand2 : operand1;
+	if(numOne % numTwo === 0){
+	    document.getElementById("operand1").textContent = numOne;
+	    document.getElementById("operand2").textContent = numTwo;
+	    document.getElementById("operator").textContent = "/";
+	}else{
+	    game("divide");
+	}
+}
