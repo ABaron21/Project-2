@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ABaron21/Tribal_Minds#readme",
   "devDependencies": {
-    "jest": "^29.0.2"
+    "jest": "^29.0.3",
+    "jsdom": "^20.0.0"
   }
 }

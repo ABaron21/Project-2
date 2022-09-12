@@ -20,21 +20,21 @@
 
     <div class="container game-area">
         <div class="row difficulty-area">
-            <div class=""><button class="btn btn--curve">Easy</button></div>
-            <div class=""><button class="btn btn--curve">Medium</button></div>
-            <div class=""><button class="btn btn--curve">Hard</button></div>
+            <div class=""><button class="btn btn--curve" onclick="diff_setter('easy')">Easy</button></div>
+            <div class=""><button class="btn btn--curve" onclick="diff_setter('medium')">Medium</button></div>
+            <div class=""><button class="btn btn--curve" onclick="diff_setter('hard')">Hard</button></div>
         </div>
         <div class="row controls-area">
-            <div class="col-6 col-md-3"><button class="btn btn--med">
+            <div class="col-6 col-md-3"><button data-type="add" class="btn btn--med">
                     <i class="fas fa-plus"></i>
                 </button></div>
-            <div class="col-6 col-md-3"><button class="btn btn--med">
+            <div class="col-6 col-md-3"><button data-type="subtract" class="btn btn--med">
                     <i class="fas fa-minus"></i>
                 </button></div>
-            <div class="col-6 col-md-3"><button class="btn btn--med">
+            <div class="col-6 col-md-3"><button data-type="multiply" class="btn btn--med">
                     <i class="fas fa-times"></i>
                 </button></div>
-            <div class="col-6 col-md-3"><button class="btn btn--med">
+            <div class="col-6 col-md-3"><button data-type="divide" class="btn btn--med">
                     <i class="fas fa-divide"></i>
                 </button></div>
         </div>
@@ -44,17 +44,18 @@
             <span id="operand2">0</span>
             <span>=</span>
             <p>Enter Answer:</p>
-            <input type="number">
+            <input id="answer-box" type="number">
             <button class="btn btn-dark" data-type="submit">Submit Answer</button>
         </div>
     </div>
 
     <div class="container score-area">
-        <p>Correct Answers: <span>0</span></p>
-        <p>Incorrect Answers: <span>0</span></p>
+        <p >Correct Answers: <span id="correct">0</span></p>
+        <p >Incorrect Answers: <span id="incorrect">0</span></p>
     </div>
 
     <!--Scripts-->
+    <script src="assets/scripts/mathemania.js"></script>
     <script src="https://kit.fontawesome.com/aa35820a25.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

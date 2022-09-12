@@ -115,8 +115,8 @@ describe("Setting game", ()=>{
 describe("Displaying components in the DOM", ()=>{
     test("expects question spans to change", () =>{
         game("easy");
-        expects(document.getElementById("operand1").innerHTML).toBeGreaterThan(0);
-        expects(document.getElementById("operand2").innerHTML).toBeGreaterThan(0);
-        expects(document.getElementById("operator").innerHTML).toEqual("+");
+        expect(document.getElementById("operand1").innerHTML).toBeGreaterThan("0");
+        expect(document.getElementById("operand2").innerHTML).toBeGreaterThan("0");
+        expect(document.getElementById("operator").innerHTML).toEqual("+");
     })
 })
