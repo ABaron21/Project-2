@@ -29,18 +29,21 @@ let currentGame = {
 
 function diff_setter(mode){
     if(mode == "easy"){
+        resetScores();
         currentGame.factor1 = 25;
         currentGame.factor2 = 25;
         $("#easy-btn").addClass("btn--active");
         $("#medium-btn").removeClass("btn--active");
         $("#hard-btn").removeClass("btn--active");
     } else if(mode == "medium"){
+        resetScores();
         currentGame.factor1 = 50;
         currentGame.factor2 = 50;
         $("#easy-btn").removeClass("btn--active");
         $("#medium-btn").addClass("btn--active");
         $("#hard-btn").removeClass("btn--active");
     } else if (mode == "hard"){
+        resetScores();
         currentGame.factor1 = 100;
         currentGame.factor2 = 100;
         $("#easy-btn").removeClass("btn--active");
@@ -104,6 +107,15 @@ function incrementScore() {
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = ++oldScore;
+}
+
+function resetScores(){
+    let oldCorrect = parseInt(document.getElementById('correct').innerText);
+    oldCorrect = 0;
+    document.getElementById('correct').innerText = oldCorrect;
+    let oldIncorrect = parseInt(document.getElementById('incorrect').innerText);
+    oldIncorrect = 0;
+    document.getElementById('incorrect').innerText = oldIncorrect;
 }
 
 function displayAddition(operand1, operand2){
