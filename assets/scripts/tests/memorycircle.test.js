@@ -112,3 +112,18 @@ describe("game works correctly", () =>{
         expect(game.previousCircle).toEqual("");
     })
 })
+
+describe("difficulty buttons work correctly", ()=>{
+    test("Easy button sets max score to 10", ()=>{
+        diff_setter("easy");
+        expect(game.max_score).toBe(10);
+    })
+    test("Medium button sets max score to 20", ()=>{
+        diff_setter("medium");
+        expect(game.max_score).toBe(20);
+    })
+    test("Hard button sets max score to 30", ()=>{
+        diff_setter("hard");
+        expect(game.max_score).toBe(30);
+    })
+})
