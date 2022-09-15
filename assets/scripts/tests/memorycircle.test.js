@@ -40,10 +40,13 @@ describe("newGame functions as expected", () =>{
     test("score to be 0", ()=>{
         expect(game.score).toEqual(0);
     })
-    test("currentGame to be empty", ()=>{
+    test("currentGame array to be empty", ()=>{
         expect(game.currentGame.length).toEqual(0);
     })
-    test("moves to be empty", ()=>{
+    test("moves array to be empty", ()=>{
         expect(game.moves.length).toEqual(0);
+    })
+    test("should set and display the current score", () =>{
+        expect(document.getElementById("score").innerHTML).toEqual(0);
     })
 })
