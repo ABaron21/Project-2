@@ -4,6 +4,8 @@
 
 const {game, newGame, showScore, addTurn, lightUp, displayTurns} = require("../memorycircle");
 
+jest.spyOn(window, "alert").mockImplementation(()=>{ });
+
 beforeAll(()=>{
     let fs = require("fs");
     let fileContents = fs.readFileSync("memorycircle.html", "utf-8");
@@ -49,6 +51,12 @@ describe("newGame functions as expected", () =>{
     test("should set and display the current score", () =>{
         expect(document.getElementById("score").innerText).toEqual(0);
     })
+    test("data-listener should be true", ()=>{
+        const elements = document.getElementsByClassName("circle");
+        for (let element of elements){
+            expect(element.getAttribute("data-listener")).toEqual("true");
+        }
+    })
 })
 
 describe("game works correctly", () =>{
@@ -76,5 +84,15 @@ describe("game works correctly", () =>{
         game.turn = 13;
         displayTurns();
         expect(game.turn).toBe(0);
+    })
+    test("should increase the score if a turn is correct", ()=>{
+        game.moves.push(game.currentGame[0]);
+        userTurn();
+        expect(game.score).toBe(1);
+    })
+    test("should display an error message if a user clicks a wrong circle", ()=>{
+        game.moves.push("wrong");
+        userTurn();
+        expect(window.alert).toBeCalledWith("Incorrect Move!");
     })
 })
