@@ -2,6 +2,8 @@
 * @jest-environment jsdom
 */
 
+const {game} = require("../memorycircle");
+
 beforeAll(()=>{
     let fs = require("fs");
     let fileContents = fs.readFileSync("memorycircle.html", "utf-8");
