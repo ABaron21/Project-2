@@ -1,5 +1,6 @@
 let game = {
     score: 0,
+    turn: 0,
     currentGame: [],
     moves: [],
     choices: ["circle1", "circle2", "circle3", "circle4"]
@@ -16,6 +17,7 @@ function newGame(){
 function addTurn(){
     game.moves = [];
     game.currentGame.push(game.choices[(Math.floor(Math.random() * 4))]);
+    displayTurns();
 }
 
 function lightUp(circ){
@@ -25,8 +27,19 @@ function lightUp(circ){
     }, 400))
 }
 
+function displayTurns(){
+    game.turn = 0;
+    let turns = setInterval(()=>{
+        lightUp(game.currentGame[game.turn]);
+        game.turn++;
+        if(game.turn >= game.currentGame.length){
+            clearInterval(turns);
+        }
+    }, 600);
+}
+
 function showScore(){
     document.getElementById("score").innerText = game.score;
 }
 
-module.exports = {game, newGame, showScore, addTurn, lightUp};
+module.exports = {game, newGame, showScore, addTurn, lightUp, displayTurns};

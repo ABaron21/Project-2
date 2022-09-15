@@ -2,7 +2,7 @@
 * @jest-environment jsdom
 */
 
-const {game, newGame, showScore, addTurn, lightUp} = require("../memorycircle");
+const {game, newGame, showScore, addTurn, lightUp, displayTurns} = require("../memorycircle");
 
 beforeAll(()=>{
     let fs = require("fs");
@@ -71,5 +71,10 @@ describe("game works correctly", () =>{
         let button = document.getElementById(game.currentGame[0]);
         lightUp(game.currentGame[0]);
         expect(button.classList).toContain("light");
+    })
+    test("displayTurns should set game.turn to 0", ()=>{
+        game.turn = 13;
+        displayTurns();
+        expect(game.turn).toBe(0);
     })
 })
