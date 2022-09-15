@@ -10,6 +10,12 @@ function newGame(){
     game.currentGame = [];
     game.moves = [];
     showScore();
+    addTurn();
+}
+
+function addTurn(){
+    game.moves = [];
+    game.currentGame.push(game.choices[(Math.floor(Math.random() * 4))]);
 }
 
 function showScore(){

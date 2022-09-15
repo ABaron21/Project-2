@@ -37,13 +37,13 @@ describe("newGame functions as expected", () =>{
         game.moves = ["button1", "button2"];
         newGame();
     })
-    test("score to be 0", ()=>{
+    test("score should be 0", ()=>{
         expect(game.score).toEqual(0);
     })
-    test("currentGame array to be empty", ()=>{
-        expect(game.currentGame.length).toEqual(0);
+    test("should be 1 in the currentGame array", ()=>{
+        expect(game.currentGame.length).toEqual(1);
     })
-    test("moves array to be empty", ()=>{
+    test("moves array should be empty", ()=>{
         expect(game.moves.length).toEqual(0);
     })
     test("should set and display the current score", () =>{
