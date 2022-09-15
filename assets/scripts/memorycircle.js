@@ -2,7 +2,7 @@ let game = {
     score: 0,
     currentGame: [],
     moves: [],
-    choices: ["button1", "button2", "button3", "button4"]
+    choices: ["circle1", "circle2", "circle3", "circle4"]
 }
 
 function newGame(){
@@ -18,8 +18,15 @@ function addTurn(){
     game.currentGame.push(game.choices[(Math.floor(Math.random() * 4))]);
 }
 
+function lightUp(circ){
+    document.getElementById(circ).classList.add("light");
+    setTimeout((()=>{
+        document.getElementById(circ).classList.remove("light");
+    }, 400))
+}
+
 function showScore(){
     document.getElementById("score").innerText = game.score;
 }
 
-module.exports = {game, newGame, showScore};
+module.exports = {game, newGame, showScore, addTurn, lightUp};

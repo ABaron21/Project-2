@@ -2,7 +2,7 @@
 * @jest-environment jsdom
 */
 
-const {game, newGame, showScore} = require("../memorycircle");
+const {game, newGame, showScore, addTurn, lightUp} = require("../memorycircle");
 
 beforeAll(()=>{
     let fs = require("fs");
@@ -26,7 +26,7 @@ describe("game object contains keys", ()=>{
         expect("choices" in game).toBe(true);
     })
     test("choices contains ids", ()=>{
-        expect(game.choices).toEqual(["button1", "button2", "button3", "button4"]);
+        expect(game.choices).toEqual(["circle1", "circle2", "circle3", "circle4"]);
     })
 })
 
@@ -48,5 +48,28 @@ describe("newGame functions as expected", () =>{
     })
     test("should set and display the current score", () =>{
         expect(document.getElementById("score").innerText).toEqual(0);
+    })
+})
+
+describe("game works correctly", () =>{
+    beforeEach(()=>{
+        game.score = 0;
+        game.currentGame = [];
+        game.moves = [];
+        addTurn();
+    })
+    afterEach(()=>{
+        game.score = 0;
+        game.currentGame = [];
+        game.moves =[];
+    })
+    test("addTurn should add to the currentGame array", ()=>{
+        addTurn();
+        expect(game.currentGame.length).toBe(2);
+    })
+    test("should add the class to light up each button", ()=>{
+        let button = document.getElementById(game.currentGame[0]);
+        lightUp(game.currentGame[0]);
+        expect(button.classList).toContain("light");
     })
 })

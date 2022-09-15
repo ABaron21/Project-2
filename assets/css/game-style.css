@@ -195,6 +195,10 @@ p {
     padding-top: 11px;
 }
 
+.light{
+    opacity: 0.5;
+}
+
 /* --Media Queries-- */
 @media screen and (min-width: 768px) {
 
