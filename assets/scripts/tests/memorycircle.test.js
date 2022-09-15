@@ -2,7 +2,7 @@
 * @jest-environment jsdom
 */
 
-const {game} = require("../memorycircle");
+const {game, newGame} = require("../memorycircle");
 
 beforeAll(()=>{
     let fs = require("fs");
