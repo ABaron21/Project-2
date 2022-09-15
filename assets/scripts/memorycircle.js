@@ -57,7 +57,7 @@ function lightUp(circ){
     document.getElementById(circ).classList.add("light");
     setTimeout(()=>{
         document.getElementById(circ).classList.remove("light");
-    }, 300)
+    }, 400)
 }
 
 function displayTurns(){
@@ -70,7 +70,7 @@ function displayTurns(){
             clearInterval(turns);
             game.turnsProcessing = false;
         }
-    }, 600);
+    }, 800);
 }
 
 function userTurn(){
@@ -89,6 +89,13 @@ function userTurn(){
 
 function showScore(){
     document.getElementById("score").innerText = game.score;
+    checkScore();
+}
+
+function checkScore(){
+    if(game.score === game.max_score){
+        alert("Congratulations! You've beat the game!");
+    }
 }
 
 module.exports = {game, newGame, showScore, addTurn, lightUp, displayTurns, userTurn, diff_setter};
