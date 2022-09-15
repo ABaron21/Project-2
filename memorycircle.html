@@ -20,10 +20,10 @@
     <h5 class="text-center">(Circle Edition)</h5>
 
     <div class="container circle-area">
-        <div class="circle circle-one" id="circle1"></div>
-        <div class="circle circle-two" id="circle2"></div>
-        <div class="circle circle-three" id="circle3"></div>
-        <div class="circle circle-four" id="circle4"></div>
+        <div data-listener="false" class="circle circle-one" id="circle1"></div>
+        <div data-listener="false" class="circle circle-two" id="circle2"></div>
+        <div data-listener="false" class="circle circle-three" id="circle3"></div>
+        <div data-listener="false" class="circle circle-four" id="circle4"></div>
         <div class="scorebox" id="score">0</div>
     </div>
 
@@ -34,11 +34,12 @@
             <div class=""><button class="btn btn--curve">Hard</button></div>
         </div>
         <div class="row">
-            <button class="btn btn--curve btn-newgame">New Game</button>
+            <button class="btn btn--curve btn-newgame" onclick="newGame()">New Game</button>
         </div>
     </div>
 
     <!--Scripts-->
+    <script src="assets/scripts/memorycircle.js"></script>
     <script src="https://kit.fontawesome.com/aa35820a25.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

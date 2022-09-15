@@ -2,7 +2,7 @@
 * @jest-environment jsdom
 */
 
-const {game, newGame, showScore, addTurn, lightUp, displayTurns} = require("../memorycircle");
+const {game, newGame, showScore, addTurn, lightUp, displayTurns, userTurn} = require("../memorycircle");
 
 jest.spyOn(window, "alert").mockImplementation(()=>{ });
 
@@ -33,7 +33,7 @@ describe("game object contains keys", ()=>{
 })
 
 describe("newGame functions as expected", () =>{
-    beforeAll(()=>{
+    beforeEach(()=>{
         game.score = 23;
         game.currentGame = ["button1", "button2"];
         game.moves = ["button1", "button2"];
