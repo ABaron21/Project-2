@@ -95,4 +95,14 @@ describe("game works correctly", () =>{
         userTurn();
         expect(window.alert).toBeCalledWith("Incorrect Move!");
     })
+    test("turnsProcessing should be set to true", ()=>{
+        displayTurns();
+        expect(game.turnsProcessing).toEqual(true);
+    })
+    test("shouldn't be able to click during the turns being displayed", ()=>{
+        displayTurns();
+        game.previousCircle = "";
+        document.getElementById("circle2").click();
+        expect(game.previousCircle).toEqual("");
+    })
 })

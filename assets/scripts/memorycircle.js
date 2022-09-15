@@ -33,9 +33,9 @@ function addTurn(){
 
 function lightUp(circ){
     document.getElementById(circ).classList.add("light");
-    setTimeout((()=>{
+    setTimeout(()=>{
         document.getElementById(circ).classList.remove("light");
-    }, 400))
+    }, 300)
 }
 
 function displayTurns(){

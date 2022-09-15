@@ -111,6 +111,7 @@ p {
     border-radius: 50%;
     position: absolute;
     cursor: pointer;
+    opacity: 0.4;
 }
 
 .circle-one {
@@ -196,7 +197,7 @@ p {
 }
 
 .light{
-    opacity: 0.5;
+    opacity: 1;
 }
 
 /* --Media Queries-- */
