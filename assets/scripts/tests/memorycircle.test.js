@@ -25,4 +25,25 @@ describe("game object contains keys", ()=>{
     test("choices key exists", ()=>{
         expect("choices" in game).toBe(true);
     })
+    test("choices contains ids", ()=>{
+        expect(game.choices).toEqual(["button1", "button2", "button3", "button4"]);
+    })
+})
+
+describe("newGame functions as expected", () =>{
+    beforeAll(()=>{
+        game.score = 23;
+        game.currentGame = ["button1", "button2"];
+        game.moves = ["button1", "button2"];
+        newGame();
+    })
+    test("score to be 0", ()=>{
+        expect(game.score).toEqual(0);
+    })
+    test("currentGame to be empty", ()=>{
+        expect(game.currentGame.length).toEqual(0);
+    })
+    test("moves to be empty", ()=>{
+        expect(game.moves.length).toEqual(0);
+    })
 })
