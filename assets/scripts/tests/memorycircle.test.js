@@ -2,7 +2,7 @@
 * @jest-environment jsdom
 */
 
-const {game, newGame} = require("../memorycircle");
+const {game, newGame, showScore} = require("../memorycircle");
 
 beforeAll(()=>{
     let fs = require("fs");
@@ -47,6 +47,6 @@ describe("newGame functions as expected", () =>{
         expect(game.moves.length).toEqual(0);
     })
     test("should set and display the current score", () =>{
-        expect(document.getElementById("score").innerHTML).toEqual(0);
+        expect(document.getElementById("score").innerText).toEqual(0);
     })
 })
