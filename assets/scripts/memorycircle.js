@@ -1,11 +1,28 @@
 let game = {
     score: 0,
+    max_score: 0,
     turn: 0,
     currentGame: [],
     moves: [],
     choices: ["circle1", "circle2", "circle3", "circle4"],
     turnsProcessing: false,
     previousCircle: ""
+}
+
+function diff_setter(diff){
+    switch(diff){
+        case "easy":
+            game.max_score = 10;
+            break
+        case "medium":
+            game.max_score = 20;
+            break
+        case "hard":
+            game.max_score = 30;
+            break
+        default:
+            return "No difficulty selected";
+    }
 }
 
 function newGame(){
@@ -74,4 +91,4 @@ function showScore(){
     document.getElementById("score").innerText = game.score;
 }
 
-module.exports = {game, newGame, showScore, addTurn, lightUp, displayTurns, userTurn};
+module.exports = {game, newGame, showScore, addTurn, lightUp, displayTurns, userTurn, diff_setter};

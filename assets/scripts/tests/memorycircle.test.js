@@ -2,7 +2,7 @@
 * @jest-environment jsdom
 */
 
-const {game, newGame, showScore, addTurn, lightUp, displayTurns, userTurn} = require("../memorycircle");
+const {game, newGame, showScore, addTurn, lightUp, displayTurns, userTurn, diff_setter} = require("../memorycircle");
 
 jest.spyOn(window, "alert").mockImplementation(()=>{ });
 
