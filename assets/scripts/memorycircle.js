@@ -3,7 +3,9 @@ let game = {
     turn: 0,
     currentGame: [],
     moves: [],
-    choices: ["circle1", "circle2", "circle3", "circle4"]
+    choices: ["circle1", "circle2", "circle3", "circle4"],
+    turnsProcessing: false,
+    previousCircle: ""
 }
 
 function newGame(){
@@ -13,10 +15,13 @@ function newGame(){
     for(let circle of document.getElementsByClassName("circle")){
         if(circle.getAttribute("data-listener") !== "true"){
             circle.addEventListener("click", (e)=>{
-                let move = e.target.getAttribute("id");
-                lightUp(move);
-                game.moves.push(move);
-                userTurn();
+                if(game.currentGame.length > 0 && !game.turnsProcessing){
+                    let move = e.target.getAttribute("id");
+                    game.previousCircle = move;
+                    lightUp(move);
+                    game.moves.push(move);
+                    userTurn();
+                }
             })
             circle.setAttribute("data-listener", "true");
         }
@@ -39,12 +44,14 @@ function lightUp(circ){
 }
 
 function displayTurns(){
+    game.turnsProcessing = true;
     game.turn = 0;
     let turns = setInterval(()=>{
         lightUp(game.currentGame[game.turn]);
         game.turn++;
         if(game.turn >= game.currentGame.length){
             clearInterval(turns);
+            game.turnsProcessing = false;
         }
     }, 600);
 }

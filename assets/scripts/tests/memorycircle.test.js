@@ -27,6 +27,12 @@ describe("game object contains keys", ()=>{
     test("choices key exists", ()=>{
         expect("choices" in game).toBe(true);
     })
+    test("turnsProcessing key exists", ()=>{
+        expect("turnsProcessing" in game).toBe(true);
+    })
+    test("previousCircle key exists", ()=>{
+        expect("previousCircle" in game).toBe(true);
+    })
     test("choices contains ids", ()=>{
         expect(game.choices).toEqual(["circle1", "circle2", "circle3", "circle4"]);
     })
