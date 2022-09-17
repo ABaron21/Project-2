@@ -94,4 +94,35 @@ describe("gameplay works correctly", () =>{
         playersTurn();
         expect(window.alert).toBeCalledWith("Incorrect Button!");
     })
+    test("turnsProcessing should be set to true", ()=>{
+        showTurns();
+        expect(game.turnsProcessing).toEqual(true);
+    })
+    test("shouldn't be able to click during the turns being displayed", ()=>{
+        showTurns();
+        game.previousButton = "";
+        document.getElementById("button3").click();
+        expect(game.previousButton).toEqual("");
+    })
+    test("game should finish when max score reached and message displayed for user", ()=>{
+        btn_diff("easy");
+        game.score = 15;
+        displayScore();
+        expect(window.alert).toBeCalledWith("Congratulations! You've beat the game!");
+    })
+})
+
+describe("difficulty buttons work correctly", ()=>{
+    test("Easy button sets max score to 15", ()=>{
+        btn_diff("easy");
+        expect(game.max_score).toBe(15);
+    })
+    test("Medium button sets max score to 30", ()=>{
+        btn_diff("medium");
+        expect(game.max_score).toBe(30);
+    })
+    test("Hard button sets max score to 45", ()=>{
+        btn_diff("hard");
+        expect(game.max_score).toBe(45);
+    })
 })
