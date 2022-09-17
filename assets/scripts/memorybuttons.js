@@ -1,9 +1,28 @@
 let game = {
     score: 0,
+    max_score: 0,
     currentGame: "",
     userMoves: [],
     userChoices: ["button1", "button2", "button3", "button4", "button5", "button6"],
-    turn: 0
+    turn: 0,
+    turnInProcess: false,
+    previousButton: ""
+}
+
+function btn_diff(diff) {
+    switch (diff) {
+        case "easy":
+            game.max_score = 15;
+            break
+        case "medium":
+            game.max_score = 30;
+            break
+        case "hard":
+            game.max_score = 45;
+            break
+        default:
+            return "No difficulty selected";
+    }
 }
 
 function beginGame(){
@@ -13,8 +32,9 @@ function beginGame(){
     for (let button of document.getElementsByClassName("btn--big")) {
         if (button.getAttribute("data-listener") !== "true") {
             button.addEventListener("click", (e) => {
-                if (game.currentGame.length > 0) {
+                if (game.currentGame.length > 0 && !game.turnInProcess) {
                     let move = e.target.getAttribute("id");
+                    game.previousButton = move;
                     lightUp(move);
                     game.userMoves.push(move);
                     playersTurn();
@@ -41,12 +61,14 @@ function lightUp(btn) {
 }
 
 function showTurns() {
+    game.turnInProcess = true;
     game.turn = 0;
     let turns = setInterval(() => {
         lightUp(game.currentGame[game.turn]);
         game.turn++;
         if (game.turn >= game.currentGame.length) {
             clearInterval(turns);
+            game.turnInProcess = false;
         }
     }, 800);
 }
@@ -67,6 +89,13 @@ function playersTurn() {
 
 function displayScore(){
     document.getElementById("score").innerText = game.score;
+    checkScore();
 }
 
-module.exports = {game, beginGame, displayScore, addTurn, lightUp, showTurns, playersTurn};
+function checkScore() {
+    if (game.score === game.max_score) {
+        alert("Congratulations! You've beat the game!");
+    }
+}
+
+module.exports = {game, beginGame, displayScore, addTurn, lightUp, showTurns, playersTurn, btn_diff};

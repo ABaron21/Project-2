@@ -10,7 +10,7 @@ beforeAll(()=>{
     document.close();
 })
 
-const {game, beginGame, displayScore, addTurn, lightUp, showTurns, playersTurn} = require("../memorybuttons");
+const {game, beginGame, displayScore, addTurn, lightUp, showTurns, playersTurn, btn_diff} = require("../memorybuttons");
 jest.spyOn(window, "alert").mockImplementation(()=>{ });
 
 describe("game object contains keys", ()=>{
@@ -96,7 +96,7 @@ describe("gameplay works correctly", () =>{
     })
     test("turnsProcessing should be set to true", ()=>{
         showTurns();
-        expect(game.turnsProcessing).toEqual(true);
+        expect(game.turnInProcess).toEqual(true);
     })
     test("shouldn't be able to click during the turns being displayed", ()=>{
         showTurns();
