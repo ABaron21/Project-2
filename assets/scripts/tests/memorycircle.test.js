@@ -2,7 +2,7 @@
 * @jest-environment jsdom
 */
 
-const {game, newGame, showScore, addTurn, lightUp, displayTurns, userTurn, diff_setter} = require("../memorycircle");
+const {game, newGame, showScore, addTurn, lightUp, displayTurns, userTurn, circle_diff} = require("../memorycircle");
 
 jest.spyOn(window, "alert").mockImplementation(()=>{ });
 
@@ -121,15 +121,15 @@ describe("game works correctly", () =>{
 
 describe("difficulty buttons work correctly", ()=>{
     test("Easy button sets max score to 10", ()=>{
-        diff_setter("easy");
+        circle_diff("easy");
         expect(game.max_score).toBe(10);
     })
     test("Medium button sets max score to 20", ()=>{
-        diff_setter("medium");
+        circle_diff("medium");
         expect(game.max_score).toBe(20);
     })
     test("Hard button sets max score to 30", ()=>{
-        diff_setter("hard");
+        circle_diff("hard");
         expect(game.max_score).toBe(30);
     })
 })
