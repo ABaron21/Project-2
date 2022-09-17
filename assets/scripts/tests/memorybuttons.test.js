@@ -10,7 +10,7 @@ beforeAll(()=>{
     document.close();
 })
 
-const {game, beginGame, displayScore, addTurn, lightUp, showTurns} = require("../memorybuttons");
+const {game, beginGame, displayScore, addTurn, lightUp, showTurns, playersTurn} = require("../memorybuttons");
 jest.spyOn(window, "alert").mockImplementation(()=>{ });
 
 describe("game object contains keys", ()=>{
