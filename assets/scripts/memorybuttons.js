@@ -2,7 +2,8 @@ let game = {
     score: 0,
     currentGame: "",
     userMoves: [],
-    userChoices: ["button1", "button2", "button3", "button4", "button5", "button6"]
+    userChoices: ["button1", "button2", "button3", "button4", "button5", "button6"],
+    turn: 0
 }
 
 function beginGame(){
@@ -12,8 +13,32 @@ function beginGame(){
     displayScore();
 }
 
+function addTurn() {
+    game.userMoves = [];
+    game.currentGame.push(game.userChoices[(Math.floor(Math.random() * 6))]);
+    showTurns();
+}
+
+function lightUp(btn) {
+    document.getElementById(btn).classList.add("light");
+    setTimeout(() => {
+        document.getElementById(btn).classList.remove("light");
+    }, 400)
+}
+
+function showTurns() {
+    game.turn = 0;
+    let turns = setInterval(() => {
+        lightUp(game.currentGame[game.turn]);
+        game.turn++;
+        if (game.turn >= game.currentGame.length) {
+            clearInterval(turns);
+        }
+    }, 800);
+}
+
 function displayScore(){
     document.getElementById("score").innerText = game.score;
 }
 
-module.exports = {game, beginGame, displayScore};
+module.exports = {game, beginGame, displayScore, addTurn, lightUp, showTurns};

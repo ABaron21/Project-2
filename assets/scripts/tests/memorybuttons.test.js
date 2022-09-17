@@ -10,7 +10,7 @@ beforeAll(()=>{
     document.close();
 })
 
-const {game, beginGame, displayScore} = require("../memorybuttons");
+const {game, beginGame, displayScore, addTurn, lightUp, showTurns} = require("../memorybuttons");
 
 describe("game object contains keys", ()=>{
     test("score key exists", ()=>{
@@ -55,13 +55,13 @@ describe("gameplay works correctly", () =>{
     beforeEach(()=>{
         game.score = 0;
         game.currentGame = [];
-        game.moves = [];
+        game.userMoves = [];
         addTurn();
     })
     afterEach(()=>{
         game.score = 0;
         game.currentGame = [];
-        game.moves =[];
+        game.userMoves =[];
     })
     test("addTurn should add to the currentGame array", ()=>{
         addTurn();
@@ -74,7 +74,7 @@ describe("gameplay works correctly", () =>{
     })
     test("showTurns should set game.turn to 0", ()=>{
         game.turn = 13;
-        displayTurns();
+        showTurns();
         expect(game.turn).toBe(0);
     })
 })
