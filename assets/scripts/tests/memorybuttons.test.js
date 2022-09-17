@@ -10,7 +10,7 @@ beforeAll(()=>{
     document.close();
 })
 
-const {game} = require("../memorybuttons");
+const {game, beginGame, displayScore} = require("../memorybuttons");
 
 describe("game object contains keys", ()=>{
     test("score key exists", ()=>{
@@ -35,7 +35,7 @@ describe("beginGame functions as expected", () =>{
         game.score = 14;
         game.currentGame = ["button1", "button2"];
         game.moves = ["button1", "button2"];
-        newGame();
+        beginGame();
     })
     test("score should be 0", ()=>{
         expect(game.score).toEqual(0);
@@ -44,7 +44,7 @@ describe("beginGame functions as expected", () =>{
         expect(game.currentGame.length).toEqual(0);
     })
     test("user moves array should be empty", ()=>{
-        expect(game.moves.length).toEqual(0);
+        expect(game.userMoves.length).toEqual(0);
     })
     test("should set and display the current score", () =>{
         expect(document.getElementById("score").innerText).toEqual(0);
