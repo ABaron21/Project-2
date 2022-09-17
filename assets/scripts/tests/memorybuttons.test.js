@@ -41,14 +41,20 @@ describe("beginGame functions as expected", () =>{
     test("score should be 0", ()=>{
         expect(game.score).toEqual(0);
     })
-    test("should empty the currentGame array", ()=>{
-        expect(game.currentGame.length).toEqual(0);
+    test("currentGame array should have 1 in", ()=>{
+        expect(game.currentGame.length).toEqual(1);
     })
     test("user moves array should be empty", ()=>{
         expect(game.userMoves.length).toEqual(0);
     })
     test("should set and display the current score", () =>{
         expect(document.getElementById("score").innerText).toEqual(0);
+    })
+    test("data-listener should be true", ()=>{
+        const elements = document.getElementsByClassName("btn--big");
+        for (let element of elements){
+            expect(element.getAttribute("data-listener")).toEqual("true");
+        }
     })
 })
 

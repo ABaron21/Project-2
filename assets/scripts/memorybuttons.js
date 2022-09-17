@@ -11,6 +11,7 @@ function beginGame(){
     game.currentGame = [];
     game.userMoves = [];
     displayScore();
+    addTurn();
 }
 
 function addTurn() {
