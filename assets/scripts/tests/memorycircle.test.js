@@ -41,8 +41,8 @@ describe("game object contains keys", ()=>{
 describe("newGame functions as expected", () =>{
     beforeEach(()=>{
         game.score = 23;
-        game.currentGame = ["button1", "button2"];
-        game.moves = ["button1", "button2"];
+        game.currentGame = ["circle1", "circle2"];
+        game.moves = ["circle1", "circle2"];
         newGame();
     })
     test("score should be 0", ()=>{
