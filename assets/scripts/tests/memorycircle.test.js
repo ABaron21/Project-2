@@ -112,7 +112,7 @@ describe("game works correctly", () =>{
         expect(game.previousCircle).toEqual("");
     })
     test("game should finish when max score reached and message displayed for user", ()=>{
-        diff_setter("easy");
+        circle_diff("easy");
         game.score = 10;
         showScore();
         expect(window.alert).toBeCalledWith("Congratulations! You've beat the game!");

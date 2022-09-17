@@ -10,6 +10,8 @@ beforeAll(()=>{
     document.close();
 })
 
+const {game} = require("../memorybuttons");
+
 describe("game object contains keys", ()=>{
     test("score key exists", ()=>{
         expect("score" in game).toBe(true);
@@ -18,12 +20,12 @@ describe("game object contains keys", ()=>{
         expect("currentGame" in game).toBe(true);
     })
     test("moves key exists", ()=>{
-        expect("moves" in game).toBe(true);
+        expect("userMoves" in game).toBe(true);
     })
     test("choices key exists", ()=>{
-        expect("choices" in game).toBe(true);
+        expect("userChoices" in game).toBe(true);
     })
     test("choices contains ids for each button", ()=>{
-        expect(game.choices).toEqual(["button1", "button2", "button3", "button4", "button5", "button6"]);
+        expect(game.userChoices).toEqual(["button1", "button2", "button3", "button4", "button5", "button6"]);
     })
 })
