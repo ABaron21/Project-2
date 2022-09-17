@@ -50,3 +50,31 @@ describe("beginGame functions as expected", () =>{
         expect(document.getElementById("score").innerText).toEqual(0);
     })
 })
+
+describe("gameplay works correctly", () =>{
+    beforeEach(()=>{
+        game.score = 0;
+        game.currentGame = [];
+        game.moves = [];
+        addTurn();
+    })
+    afterEach(()=>{
+        game.score = 0;
+        game.currentGame = [];
+        game.moves =[];
+    })
+    test("addTurn should add to the currentGame array", ()=>{
+        addTurn();
+        expect(game.currentGame.length).toBe(2);
+    })
+    test("should add the class to light up each button", ()=>{
+        let button = document.getElementById(game.currentGame[0]);
+        lightUp(game.currentGame[0]);
+        expect(button.classList).toContain("light");
+    })
+    test("showTurns should set game.turn to 0", ()=>{
+        game.turn = 13;
+        displayTurns();
+        expect(game.turn).toBe(0);
+    })
+})
