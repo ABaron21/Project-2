@@ -11,6 +11,7 @@ beforeAll(()=>{
 })
 
 const {game, beginGame, displayScore, addTurn, lightUp, showTurns} = require("../memorybuttons");
+jest.spyOn(window, "alert").mockImplementation(()=>{ });
 
 describe("game object contains keys", ()=>{
     test("score key exists", ()=>{
@@ -76,5 +77,15 @@ describe("gameplay works correctly", () =>{
         game.turn = 13;
         showTurns();
         expect(game.turn).toBe(0);
+    })
+    test("score should increment if a turn is correct", ()=>{
+        game.userMoves.push(game.currentGame[0]);
+        playersTurn();
+        expect(game.score).toBe(1);
+    })
+    test("should display an error message if a user clicks the wrong button", ()=>{
+        game.userMoves.push("wrong");
+        playersTurn();
+        expect(window.alert).toBeCalledWith("Incorrect Button!");
     })
 })

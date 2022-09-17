@@ -26,17 +26,6 @@ function lightUp(btn) {
     }, 400)
 }
 
-function showTurns() {
-    game.turn = 0;
-    let turns = setInterval(() => {
-        lightUp(game.currentGame[game.turn]);
-        game.turn++;
-        if (game.turn >= game.currentGame.length) {
-            clearInterval(turns);
-        }
-    }, 800);
-}
-
 function displayScore(){
     document.getElementById("score").innerText = game.score;
 }
