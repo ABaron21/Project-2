@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+    btn_diff("easy");
+});
+
 let game = {
     score: 0,
     max_score: 0,
@@ -13,12 +17,21 @@ function btn_diff(diff) {
     switch (diff) {
         case "easy":
             game.max_score = 15;
+            document.getElementById("easy-btn").classList.add("btn--active");
+            document.getElementById("medium-btn").classList.remove("btn--active");
+            document.getElementById("hard-btn").classList.remove("btn--active");
             break
         case "medium":
             game.max_score = 30;
+            document.getElementById("easy-btn").classList.remove("btn--active");
+            document.getElementById("medium-btn").classList.add("btn--active");
+            document.getElementById("hard-btn").classList.remove("btn--active");
             break
         case "hard":
             game.max_score = 45;
+            document.getElementById("easy-btn").classList.remove("btn--active");
+            document.getElementById("medium-btn").classList.remove("btn--active");
+            document.getElementById("hard-btn").classList.add("btn--active");
             break
         default:
             return "No difficulty selected";
