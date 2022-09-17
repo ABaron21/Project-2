@@ -10,6 +10,19 @@ function beginGame(){
     game.score = 0;
     game.currentGame = [];
     game.userMoves = [];
+    for (let button of document.getElementsByClassName("btn--big")) {
+        if (button.getAttribute("data-listener") !== "true") {
+            button.addEventListener("click", (e) => {
+                if (game.currentGame.length > 0) {
+                    let move = e.target.getAttribute("id");
+                    lightUp(move);
+                    game.userMoves.push(move);
+                    playersTurn();
+                }
+            })
+            button.setAttribute("data-listener", "true");
+        }
+    }
     displayScore();
     addTurn();
 }
