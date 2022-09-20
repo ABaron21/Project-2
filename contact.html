@@ -9,6 +9,13 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>Tribal Minds</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("BfVDunbRlIwHUL5zP");
+        })();
+    </script>
 </head>
 
 <body>
@@ -81,13 +88,13 @@
             </div>
         </div>
         <div class="feedback-section">
-            <form action="#">
-                <div class="col-12 form-field"><input type="text" id="feedback-name" placeholder="Name"></div>
-                <div class="col-12 form-field"><input type="email" id="feedback-email" placeholder="Email Address">
+            <form onsubmit="return sendMail(this)" method="POST">
+                <div class="col-12 form-field"><input type="text" id="name" placeholder="Name"></div>
+                <div class="col-12 form-field"><input type="email" id="email" placeholder="Email Address">
                 </div>
-                <div class="col-12 form-field"><textarea id="feedback-message" placeholder="Enter your message" rows="5"
+                <div class="col-12 form-field"><textarea id="message" placeholder="Enter your message" rows="5"
                         cols="40"></textarea></div>
-                <div class="col-12"><input type="submit" value="Send" class="btn btn-dark"></div>
+                <div class="col-12"><button type="submit" class="btn btn-dark" data-toggle="modal" data-target="#email-sent">Send Feedback</button></div>
             </form>
         </div>
     </article>
@@ -213,7 +220,27 @@
             </div>
         </div>
     </div>
+    <!--Email sent confirmation-->
+    <div class="modal" tabindex="-1" role="dialog" id="email-sent">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Email Sent!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <h6>Email has been sent successfully!</h6>
+                        <button type="submit" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Scripts-->
+    <script src="assets/scripts/sendEmail.js"></script>
     <script src="https://kit.fontawesome.com/aa35820a25.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
