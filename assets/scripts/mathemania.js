@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 let currentGame = {
-    gameType: "",
     difficulty: "",
     factor1: 0,
     factor2: 0,
@@ -29,26 +28,29 @@ let currentGame = {
 
 function diff_setter(mode){
     if(mode == "easy"){
+        currentGame.difficulty = "easy";
         resetScores();
         currentGame.factor1 = 25;
         currentGame.factor2 = 25;
-        $("#easy-btn").addClass("btn--active");
-        $("#medium-btn").removeClass("btn--active");
-        $("#hard-btn").removeClass("btn--active");
+        document.getElementById("easy-btn").classList.add("btn--active");
+        document.getElementById("medium-btn").classList.remove("btn--active");
+        document.getElementById("hard-btn").classList.remove("btn--active");
     } else if(mode == "medium"){
+        currentGame.difficulty = "medium";
         resetScores();
         currentGame.factor1 = 50;
         currentGame.factor2 = 50;
-        $("#easy-btn").removeClass("btn--active");
-        $("#medium-btn").addClass("btn--active");
-        $("#hard-btn").removeClass("btn--active");
+        document.getElementById("easy-btn").classList.remove("btn--active");
+        document.getElementById("medium-btn").classList.add("btn--active");
+        document.getElementById("hard-btn").classList.remove("btn--active");
     } else if (mode == "hard"){
+        currentGame.difficulty = "hard";
         resetScores();
         currentGame.factor1 = 100;
         currentGame.factor2 = 100;
-        $("#easy-btn").removeClass("btn--active");
-        $("#medium-btn").removeClass("btn--active");
-        $("#hard-btn").addClass("btn--active");
+        document.getElementById("easy-btn").classList.remove("btn--active");
+        document.getElementById("medium-btn").classList.remove("btn--active");
+        document.getElementById("hard-btn").classList.add("btn--active");
     }
 }
 
@@ -145,3 +147,5 @@ function displayDivision(operand1, operand2){
 	    game("divide");
 	}
 }
+
+module.exports = {currentGame, game, diff_setter}
