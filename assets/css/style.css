@@ -143,19 +143,6 @@ p{
         justify-content: center;
     }
 }
-@media screen and (min-width: 1024px) {
-    .hero-content{
-        display: flex;
-        text-align: center;
-    }
-    .hero-one{
-        margin-left: 50px;
-    }
-    .hero-two{
-        margin-top: 25px;
-        margin-left: 180px;
-    }
-}
 @media screen and (min-width: 768px) {
     .mathemania-form img{
         width: 400px;
@@ -169,5 +156,40 @@ p{
     .memorymania-form img{
         width: 220px;
         height: 150px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .hero-content{
+        display: flex;
+        text-align: center;
+    }
+    .hero-one{
+        margin-left: 50px;
+    }
+    .hero-two{
+        margin-top: 35px;
+        margin-left: 100px;
+    }
+    .hero-img{
+        height: 200px;
+        width: 350px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .hero-content{
+        display: flex;
+        text-align: center;
+    }
+    .hero-one{
+        margin-left: 60px;
+    }
+    .hero-two{
+        margin-top: 50px;
+        margin-left: 140px;
+        margin-right: 40px;
+    }
+    .hero-img{
+        height: 200px;
+        width: 350px;
     }
 }
