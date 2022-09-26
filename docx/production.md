@@ -21,15 +21,50 @@ GitPages - Used to deploy the final development.
 # Testing
 
 ## Code Validation
-Landing Page
+### Landing Page
+HTML
 
-Contact Page
+![index-html](screenshots/code-validations/landing-page-html-validation.PNG)
 
-MatheMania Page
+CSS
 
-MemoryMania(Circles) Page
+![index-css](screenshots/code-validations/landing-page-css-validation.PNG)
 
-MemoryMania(Buttons) Page
+### Contact Page
+HTML
+
+![contact-html](screenshots/code-validations/contact-page-html-validation.PNG)
+
+CSS
+
+![contact-css](screenshots/code-validations/contact-page-css-validation.PNG)
+
+### MatheMania Page
+HTML
+
+![mathemania-html](screenshots/code-validations/mathemania-html-validation.PNG)
+
+CSS
+
+![mathemania-css](screenshots/code-validations/mathemania-css-validation.PNG)
+
+### MemoryMania(Circles) Page
+HTML
+
+![memorycircle-html](screenshots/code-validations/memorycircle-html-validation.PNG)
+
+CSS
+
+![memorycircle-css](screenshots/code-validations/memorycircle-css-validation.PNG)
+
+### MemoryMania(Buttons) Page
+HTML
+
+![memorybuttons-html](screenshots/code-validations/memorybuttons-html-validation.PNG)
+
+CSS
+
+![memorybuttons-css](screenshots/code-validations/memorybuttons-css-validation.PNG)
 
 ## User Stories
 
