@@ -30,6 +30,11 @@ i {
     color: #f0ffff;
     margin-left: 10px;
 }
+.return-link:hover{
+    text-decoration: none;
+    color: #f0ffff;
+    border-bottom: 1px solid #fff;
+}
 
 .btn--med {
     padding-top: 10px;
