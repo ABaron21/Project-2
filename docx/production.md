@@ -69,18 +69,54 @@ CSS
 ## User Stories
 
 ### Navigating through Tribal Minds:
+1. Load the website.
+2. Look at the top right of the page.
+3. (Mobile device) Click the hamburger icon at the top right of the screen.
+
+![userstory1-mobile](screenshots/user-stories/us1-mobile.PNG)
+![userstory1-tablet](screenshots/user-stories/us1-tablet.PNG)
+![userstory1-desktop](screenshots/user-stories/us1-desktop.PNG)
 
 ### Seeing feedback other users have given:
+1. Navigate to the contact page.
+2. Read the second section on the page.
+3. (Small devices) Scroll down to the second section.
+
+![userstory2-mobile](screenshots/user-stories/us2-mobile.PNG)
+![userstory2-tablet](screenshots/user-stories/us2-tablet.PNG)
+![userstory2-desktop](screenshots/user-stories/us2-desktop.PNG)
 
 ### Sending feedback to the developer:
+1. Navigate to the contact page.
+2. Go to the bottom of the page.
+3. Fill in the name, email and message input fields.
+4. Click the send button.
+
+![userstory3-mobile](screenshots/user-stories/us3-mobile.PNG)
+![userstory3-tablet](screenshots/user-stories/us3-tablet.PNG)
+![userstory3-desktop](screenshots/user-stories/us3-desktop.PNG)
 
 ### Selecting a different version of MemoryMania:
+1. Click the play button under the MemoryMania heading.
+2. Select the radio button labelled with which version you want to play.
+3. Click play at the bottom of the modal.
+
+![userstory4-mobile](screenshots/user-stories/us4-mobile.PNG)
+![userstory4-tablet](screenshots/user-stories/us4-tablet.PNG)
+![userstory4-desktop](screenshots/user-stories/us4-desktop.PNG)
 
 ### Switching difficulites in a game:
+1. Locate the 3 difficulty buttons on the screen/page.
+2. Click on the medium difficulty.
+3. The button will change once selected.
 
-### Bugs
+![userstory5-mobile](screenshots/user-stories/us5-mobile.PNG)
+![userstory5-tablet](screenshots/user-stories/us5-tablet.PNG)
+![userstory5-desktop](screenshots/user-stories/us5-desktop.PNG)
 
-### Screens
+## Bugs
+
+## Screens
 
 ----
 ## Deployment
