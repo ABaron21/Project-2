@@ -1,8 +1,8 @@
 function sendMail(contactform){
     emailjs.send("service_vdfvl0e", "tribal_minds", {
-        "from_name": contactform.name.value,
-        "from_email": contactform.email.value,
-        "feedback_summary": contactform.message.value
+        "from_name": contactform.feedback_name.value,
+        "from_email": contactform.feedback_email.value,
+        "feedback_summary": contactform.feedback_message.value
     })
     .then(function(response){
         console.log("SUCCESS", response);

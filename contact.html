@@ -9,19 +9,14 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>Tribal Minds</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("BfVDunbRlIwHUL5zP");
-        })();
-    </script>
 </head>
 
 <body>
     <!--Navigation-->
     <nav class="navbar navbar-expand-sm fixed-top">
-        <a class="navbar-link" href="index.html"><h6 class="navbar-title uppercase">Tribal Minds</h6></a>
+        <a class="navbar-link" href="index.html">
+            <h6 class="navbar-title uppercase">Tribal Minds</h6>
+        </a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-expanded="false" aria-controls="navbarNavDropdown" aria-label="Toggle Navigation">
             <span><i class="fa-solid fa-bars"></i></span>
@@ -89,12 +84,13 @@
         </div>
         <div class="feedback-section">
             <form onsubmit="return sendMail(this)" method="POST">
-                <div class="col-12 form-field"><input type="text" id="name" placeholder="Name"></div>
-                <div class="col-12 form-field"><input type="email" id="email" placeholder="Email Address">
+                <div class="col-12 form-field"><input type="text" id="feedback_name" placeholder="Name"></div>
+                <div class="col-12 form-field"><input type="email" id="feedback_email" placeholder="Email Address">
                 </div>
-                <div class="col-12 form-field"><textarea id="message" placeholder="Enter your message" rows="5"
+                <div class="col-12 form-field"><textarea id="feedback_message" placeholder="Enter your message" rows="5"
                         cols="40"></textarea></div>
-                <div class="col-12"><button type="submit" class="btn btn-dark" data-toggle="modal" data-target="#email-sent">Send Feedback</button></div>
+                <div class="col-12"><button type="submit" class="btn btn-dark" data-toggle="modal"
+                        data-target="#email-sent">Send Feedback</button></div>
             </form>
         </div>
     </article>
@@ -240,6 +236,13 @@
         </div>
     </div>
     <!--Scripts-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("BfVDunbRlIwHUL5zP");
+        })();
+    </script>
     <script src="assets/scripts/sendEmail.js"></script>
     <script src="https://kit.fontawesome.com/aa35820a25.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
