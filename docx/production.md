@@ -121,12 +121,18 @@ CSS
 ## Bugs
 
 ### JSDom Istalling & Implementing
+This bug occurred closed to the beginning of the test driven development and the cause of this was because the jsdom test environment wasn't installed and imported properly into the test scripts.
 
 ![jsdom-error](screenshots/bugs/jsdom-error.PNG)
 
+Fixing the issues was a simple solution of searching and reading through the documentation for the latest version of jest and jsdom test environment, then just following the steps shown to install and import the test environment.
+
 ### Sending Feedback Trigger 405 Error
+This issue didn't show up until the website was deployed to GitHub Pages, when a user would attempt to send feedback through the contact page and click the send button it would respond with a 405 'Method Not Allowed' response resulting in the user not being able to send feeback via emailJS.
 
 ![feedback-error](screenshots/bugs/feedback-bug.PNG)
+
+Resolving this issue was a case of throughly checking through the form element within contact.html as well as the sendEmail.js file, after checking the code the cause of the issue was within the form attributes and it was fixed by removing the method attribute and taking out the 'return' in the onsubmit click attribute.
 
 ## Screens
 
