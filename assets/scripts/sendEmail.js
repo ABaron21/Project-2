@@ -10,8 +10,8 @@ function sendMail(contactform){
     function(error){
         console.log("FAILED", error);
     })
-    contactform.name.value = "";
-    contactform.email.value = "";
-    contactform.message.value = "";
+    contactform.feedback_name.value = "";
+    contactform.feedback_email.value = "";
+    contactform.feedback_message.value = "";
     return false
 }
