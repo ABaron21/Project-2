@@ -66,6 +66,10 @@ CSS
 
 ![memorybuttons-css](screenshots/code-validations/memorybuttons-css-validation.PNG)
 
+### JavaScript Jest Tests
+
+![jest-testing](screenshots/jest-screenshot.PNG)
+
 ## User Stories
 
 ### Navigating through Tribal Minds:
@@ -115,6 +119,14 @@ CSS
 ![userstory5-desktop](screenshots/user-stories/us5-desktop.PNG)
 
 ## Bugs
+
+### JSDom Istalling & Implementing
+
+![jsdom-error](screenshots/bugs/jsdom-error.PNG)
+
+### Sending Feedback Trigger 405 Error
+
+![feedback-error](screenshots/bugs/feedback-bug.PNG)
 
 ## Screens
 
