@@ -145,3 +145,10 @@ Two versions on deployment:
 
 ----
 ## Credits
+
+### External Code
+* Bootstrap:
+    * Collapsable Nav Bar
+    * Modals
+
+* EmailJS
