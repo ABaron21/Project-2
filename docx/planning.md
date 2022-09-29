@@ -1,6 +1,6 @@
 # Tribal Minds
-(responsive image)
-Click here to view Tribal Minds website (link)
+![responive-image](screenshots/responsive-screenshot.PNG)
+Click here to vist the Tribal Minds website https://abaron21.github.io/Tribal_Minds
 
 ## Project Purpose
 Expanding on the static website style with basic user interaction & expierience, the website that will be built is going to extend that interaction with funcionality programmed through JS (JavaScript) and external APIs. The intended purpose for the website is for user to access different games on the website either being a mind game or maths game and also to be able to send feedback on the website.
