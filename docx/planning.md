@@ -21,7 +21,9 @@ As a user I would like to be able to send feedback to the developer so I can giv
 ## Features
 * Games with Easy, Medium & Hard difficulties:
     * Memory game with either buttons or circles.
+        * Each difficulty will change the the max number of turns a turn will need to reach in order to complete that difficulty, i.e easy - 10 medium - 20 etc.
     * Maths game
+        * The difficulties change the factors that the number generator takes into account for each operand within the game, easy - 25 medium - 50 hard - 100.
 * Reviews from previous users.
 * Sending feedback via Email.
 * See plans for new games to come.

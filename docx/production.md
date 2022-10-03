@@ -68,6 +68,8 @@ CSS
 
 ### JavaScript Jest Tests
 
+To run the tests within the command line type 'npm test' or run coverage as shown below type in the CLI 'npm test -- --coverage'.
+
 ![jest-testing](screenshots/jest-screenshot.PNG)
 
 ## User Stories
@@ -120,7 +122,7 @@ CSS
 
 ## Bugs
 
-### JSDom Istalling & Implementing
+### JSDom Installing & Implementing
 This bug occurred closed to the beginning of the test driven development and the cause of this was because the jsdom test environment wasn't installed and imported properly into the test scripts.
 
 ![jsdom-error](screenshots/bugs/jsdom-error.PNG)
