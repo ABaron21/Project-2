@@ -1,3 +1,7 @@
+/*  
+*    Sets the game difficulty to easy and game type to add,
+*    as well as adding event listeners to the game type buttons upon the web page loading.
+*/
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
@@ -25,6 +29,10 @@ let currentGame = {
     factor1: 0,
     factor2: 0,
 }
+
+/*
+*   Sets the factor used for the random number generator based on the difficulty selected, resets the scores and shows indication of which difficulty is selected.
+*/
 
 function diff_setter(mode){
     if(mode == "easy"){
@@ -56,6 +64,7 @@ function diff_setter(mode){
 
 
 function game(mode){
+    // Clears the answer box and focuses on the answer box allowing for better user expierience.
     document.getElementById('answer-box').value = "";
     document.getElementById('answer-box').focus();
     let num1 = Math.floor(Math.random() * currentGame.factor1) + 1;
@@ -102,6 +111,10 @@ function calculateCorrectAnswer() {
     }
 }
 
+/*
+*   Increases correct & incorrect score based on an answer given, resets both correct & incorrect scores when the function is called.
+*/
+
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('correct').innerText);
     document.getElementById('correct').innerText = ++oldScore;
@@ -120,6 +133,10 @@ function resetScores(){
     oldIncorrect = 0;
     document.getElementById('incorrect').innerText = oldIncorrect;
 }
+
+/*
+*   Displays both operands and the operator symbol based on the difficulty and game type the user selects.
+*/
 
 function displayAddition(operand1, operand2){
     document.getElementById('operand1').innerHTML = operand1;

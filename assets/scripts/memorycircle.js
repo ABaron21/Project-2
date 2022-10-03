@@ -13,6 +13,10 @@ let game = {
     previousCircle: ""
 }
 
+/*
+*   Sets the score to reach based on the difficulty selected and shows indication of which difficulty is selected.
+*/
+
 function circle_diff(diff) {
     switch (diff) {
         case "easy":
@@ -42,6 +46,7 @@ function newGame() {
     game.score = 0;
     game.currentGame = [];
     game.moves = [];
+    // Adds event listeners to each circle allowing users to click on them.
     for (let circle of document.getElementsByClassName("circle")) {
         if (circle.getAttribute("data-listener") !== "true") {
             circle.addEventListener("click", (e) => {
@@ -72,6 +77,11 @@ function lightUp(circ) {
         document.getElementById(circ).classList.remove("light");
     }, 400)
 }
+
+/*
+*   Signals the game that turns are being shown so it will disable the users ability to click while they're being shown.
+*   Calls the light up function with the id of the circles in the order that has been randomly chosen which will light up that circle.
+*/
 
 function displayTurns() {
     game.turnsProcessing = true;

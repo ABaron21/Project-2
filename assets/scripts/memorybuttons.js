@@ -13,6 +13,10 @@ let game = {
     previousButton: ""
 }
 
+/*
+*   Sets the score to reach based on the difficulty selected and shows indication of which difficulty is selected.
+*/
+
 function btn_diff(diff) {
     switch (diff) {
         case "easy":
@@ -42,6 +46,7 @@ function beginGame(){
     game.score = 0;
     game.currentGame = [];
     game.userMoves = [];
+    // Adds event listeners to each button allowing users to click on them.
     for (let button of document.getElementsByClassName("btn--big")) {
         if (button.getAttribute("data-listener") !== "true") {
             button.addEventListener("click", (e) => {
@@ -72,6 +77,11 @@ function lightUp(btn) {
         document.getElementById(btn).classList.remove("light");
     }, 400)
 }
+
+/*
+*   Signals the game that turns are being shown so it will disable the users ability to click while they're being shown.
+*   Calls the light up function with the id of the buttons in the order that has been randomly chosen which will light up that button.
+*/
 
 function showTurns() {
     game.turnInProcess = true;

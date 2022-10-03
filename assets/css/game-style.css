@@ -109,6 +109,7 @@ p {
 }
 
 /* --MemoryMania-- */
+/* Sets the positions of the circles allowing them to overlap */
 .circle-area {
     position: relative;
     width: 375px;
@@ -154,6 +155,7 @@ p {
     background-color: #6a5acd;
 }
 
+/* Setting the score box within the centre of all the circles */
 .scorebox {
     border-radius: 25%;
     box-sizing: border-box;
@@ -191,6 +193,7 @@ p {
     margin-top: 25px;
 }
 
+/* Setting the score box within the centre of all the buttons */
 .button-score {
     border-radius: 50%;
     box-sizing: border-box;
