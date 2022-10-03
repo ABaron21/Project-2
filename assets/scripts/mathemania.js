@@ -60,11 +60,12 @@ function game(mode){
     document.getElementById('answer-box').focus();
     let num1 = Math.floor(Math.random() * currentGame.factor1) + 1;
     let num2 = Math.floor(Math.random() * currentGame.factor2) + 1;
+    let num3 = Math.floor(Math.random() * 12) + 1;
 
     if(mode === "add"){
         displayAddition(num1, num2);
     }else if(mode === "multiply"){
-        displayMultiplication(num1, num2);
+        displayMultiplication(num1, num3);
     }else if(mode === "subtract"){
         displaySubtraction(num1, num2);
     }else if(mode === "divide"){
