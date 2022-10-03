@@ -1,4 +1,4 @@
-function sendMail(contactform){
+function sendMail(contactform) {
     emailjs.send("service_vdfvl0e", "tribal_minds", {
         "from_name": contactform.feedback_name.value,
         "from_email": contactform.feedback_email.value,

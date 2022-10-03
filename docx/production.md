@@ -98,9 +98,7 @@ To run the tests within the command line type 'npm test' or run coverage as show
 3. Fill in the name, email and message input fields.
 4. Click the send button.
 
-![userstory3-mobile](screenshots/user-stories/us3-mobile.PNG)
-![userstory3-tablet](screenshots/user-stories/us3-tablet.PNG)
-![userstory3-desktop](screenshots/user-stories/us3-desktop.PNG)
+![userstory3](screenshots/user-stories/us3.PNG)
 
 ### Selecting a different version of MemoryMania:
 1. Click the play button under the MemoryMania heading.
