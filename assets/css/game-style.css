@@ -10,6 +10,10 @@ body {
     text-transform: uppercase;
 }
 
+.modal-title{
+    color: #000000;
+}
+
 h1,
 h2,
 h3,

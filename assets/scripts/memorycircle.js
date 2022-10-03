@@ -95,8 +95,7 @@ function userTurn() {
             addTurn();
         }
     } else {
-        alert("Incorrect Move!");
-        newGame();
+        $('#incorrect-modal').modal('show');
     }
 }
 
@@ -107,7 +106,7 @@ function showScore() {
 
 function checkScore() {
     if (game.score === game.max_score) {
-        alert("Congratulations! You've beat the game!");
+        $('#success-modal').modal('show');
     }
 }
 
