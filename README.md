@@ -1,108 +1,216 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Tribal Minds
+![responive-image](docx/screenshots/responsive-screenshot.PNG)
+Click here to vist the Tribal Minds website https://abaron21.github.io/Tribal_Minds
 
-Welcome A_Baron,
+## Project Purpose
+Expanding on the static website style with basic user interaction & expierience, the website that will be built is going to extend that interaction with funcionality programmed through JS (JavaScript) and external APIs. The intended purpose for the website is for user to access different games on the website either being a mind game or maths game and also to be able to send feedback on the website.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+----
+## User Stories
+As a user I want to be able to switch between the different web pages so I can navigate easily around the website.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+As a user I would like to see the different difficulties of the games so I can choose to play easy, medium or hard difficulty.
 
-## Gitpod Reminders
+As a user I would like to know the different versions of the memory game so I can decide which one I want to play.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+As a user I want to read feedback from other users so I can see what the games are like before playing.
 
-`python3 -m http.server`
+As a user I would like to be able to send feedback to the developer so I can give a positive review or some suggestions for future developments.
 
-A blue button should appear to click: _Make Public_,
+----
+## Features
+* Games with Easy, Medium & Hard difficulties:
+    * Memory game with either buttons or circles.
+        * Each difficulty will change the the max number of turns a turn will need to reach in order to complete that difficulty, i.e easy - 10 medium - 20 etc.
+    * Maths game
+        * The difficulties change the factors that the number generator takes into account for each operand within the game, easy - 25 medium - 50 hard - 100.
+* Reviews from previous users.
+* Sending feedback via Email.
+* See plans for new games to come.
 
-Another blue button should appear to click: _Open Browser_.
+----
+## Future Features
+* Multiplayer option to challenge other users.
+* Different game modes (e.g time trials, one life).
+* Leaderboard system for each game.
+* Chat system to talk with other users.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+----
+## Typography & Colour Scheme
+* Font:
+    * Style: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans#styles)
+    * Colour: 
+* Background: Linear gradient going left to right starting with a violet colour that fades into a light purple/pink blend and fades out to the same violet colour.
 
-A blue button should appear to click: _Make Public_,
+----
+## Wireframes
+Landing Page
+![landing-page](docx/wireframes/landing-page.png)
 
-Another blue button should appear to click: _Open Browser_.
+About Page
+![contact-page](docx/wireframes/contact-page.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Maths Game
+![maths-game](docx/wireframes/maths-game.png)
 
-To log into the Heroku toolbelt CLI:
+Memory Game(Circle)
+![memory-game-circle](docx/wireframes/memory-game-circle.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Memory Game(Buttons)
+![memory-game-buttons](docx/wireframes/memory-game-buttons.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+## Technology Used
+Balsamiq Wireframes - Used to build/create the visual outline for the different web pages that the website consists of.
 
-## Release History
+GitPod - Cloud based IDE used to create and build the code for the website.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+HTML - Programming language used to build the structure of the website/web pages by the use of elements and different components.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+CSS - The styling for the website, used to make the web pages more visually appealing.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Bootstrap - An external libary used that aims to focus on the resposiveness of the website.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+JavaScript - Provides the functionality for the website, allowing for improved user interaction/expierience.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+Jest - Testing environment used to test the javascript functions within the website.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+GitHub - A cloud based storage used as the version control for the production by committing and pushing at various stages throughout the development.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+GitPages - Used to deploy the final development.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+----
+# Testing
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Code Validation
+### Landing Page
+HTML
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+![index-html](docx/screenshots/code-validations/landing-page-html-validation.PNG)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+CSS
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![index-css](docx/screenshots/code-validations/landing-page-css-validation.PNG)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Contact Page
+HTML
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![contact-html](docx/screenshots/code-validations/contact-page-html-validation.PNG)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+CSS
 
-------
+![contact-css](docx/screenshots/code-validations/contact-page-css-validation.PNG)
 
-## FAQ about the uptime script
+### MatheMania Page
+HTML
 
-**Why have you added this script?**
+![mathemania-html](docx/screenshots/code-validations/mathemania-html-validation.PNG)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+CSS
 
-**How will this affect me?**
+![mathemania-css](docx/screenshots/code-validations/mathemania-css-validation.PNG)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### MemoryMania(Circles) Page
+HTML
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+![memorycircle-html](docx/screenshots/code-validations/memorycircle-html-validation.PNG)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+CSS
 
-**So….?**
+![memorycircle-css](docx/screenshots/code-validations/memorycircle-css-validation.PNG)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### MemoryMania(Buttons) Page
+HTML
 
-**Can I opt out?**
+![memorybuttons-html](docx/screenshots/code-validations/memorybuttons-html-validation.PNG)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+CSS
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+![memorybuttons-css](docx/screenshots/code-validations/memorybuttons-css-validation.PNG)
 
-**Anything more?**
+### JavaScript Jest Tests
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+To run the tests within the command line type 'npm test' or run coverage as shown below type in the CLI 'npm test -- --coverage'.
 
----
+![jest-testing](docx/screenshots/jest-screenshot.PNG)
 
-Happy coding!
+## User Stories
+
+### Navigating through Tribal Minds:
+1. Load the website.
+2. Look at the top right of the page.
+3. (Mobile device) Click the hamburger icon at the top right of the screen.
+
+![userstory1-mobile](docx/screenshots/user-stories/us1-mobile.PNG)
+![userstory1-tablet](docx/screenshots/user-stories/us1-tablet.PNG)
+![userstory1-desktop](docx/screenshots/user-stories/us1-desktop.PNG)
+
+### Seeing feedback other users have given:
+1. Navigate to the contact page.
+2. Read the second section on the page.
+3. (Small devices) Scroll down to the second section.
+
+![userstory2-mobile](docx/screenshots/user-stories/us2-mobile.PNG)
+![userstory2-tablet](docx/screenshots/user-stories/us2-tablet.PNG)
+![userstory2-desktop](docx/screenshots/user-stories/us2-desktop.PNG)
+
+### Sending feedback to the developer:
+1. Navigate to the contact page.
+2. Go to the bottom of the page.
+3. Fill in the name, email and message input fields.
+4. Click the send button.
+
+![userstory3](docx/screenshots/user-stories/us3.PNG)
+
+### Selecting a different version of MemoryMania:
+1. Click the play button under the MemoryMania heading.
+2. Select the radio button labelled with which version you want to play.
+3. Click play at the bottom of the modal.
+
+![userstory4-mobile](docx/screenshots/user-stories/us4-mobile.PNG)
+![userstory4-tablet](docx/screenshots/user-stories/us4-tablet.PNG)
+![userstory4-desktop](docx/screenshots/user-stories/us4-desktop.PNG)
+
+### Switching difficulites in a game:
+1. Locate the 3 difficulty buttons on the screen/page.
+2. Click on the medium difficulty.
+3. The button will change once selected.
+
+![userstory5-mobile](docx/screenshots/user-stories/us5-mobile.PNG)
+![userstory5-tablet](docx/screenshots/user-stories/us5-tablet.PNG)
+![userstory5-desktop](docx/screenshots/user-stories/us5-desktop.PNG)
+
+## Bugs
+
+### JSDom Installing & Implementing
+This bug occurred closed to the beginning of the test driven development and the cause of this was because the jsdom test environment wasn't installed and imported properly into the test scripts.
+
+![jsdom-error](docx/screenshots/bugs/jsdom-error.PNG)
+
+Fixing the issues was a simple solution of searching and reading through the documentation for the latest version of jest and jsdom test environment, then just following the steps shown to install and import the test environment.
+
+### Sending Feedback Trigger 405 Error
+This issue didn't show up until the website was deployed to GitHub Pages, when a user would attempt to send feedback through the contact page and click the send button it would respond with a 405 'Method Not Allowed' response resulting in the user not being able to send feeback via emailJS.
+
+![feedback-error](docx/screenshots/bugs/feedback-bug.PNG)
+
+Resolving this issue was a case of throughly checking through the form element within contact.html as well as the sendEmail.js file, after checking the code the cause of the issue was within the form attributes and it was fixed by removing the method attribute and taking out the 'return' in the onsubmit click attribute.
+
+## Screens
+Each web pages has been tested to make sure that they are fully responsive across all screen sizes beginning with mobile devices and increasing upwards to tablets, laptops and finally desktops as it's the largest screen size expected for a browser window.
+
+----
+## Deployment
+Two versions on deployment:
+* GitPod - used throughout the development by typing 'python3 -m http.server' in the terminal which gives a prompt to open in a new tab within the browser.
+* GitPages - the final deployment of the website which makes it accesible to the public.
+
+----
+## Credits
+
+### External Code
+* Bootstrap:
+    * Collapsable Nav Bar
+    * Modals
+
+* EmailJS
