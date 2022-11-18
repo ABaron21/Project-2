@@ -44,7 +44,7 @@
             <span id="operand2">0</span>
             <span>=</span>
             <p>Enter Answer:</p>
-            <input id="answer-box" type="number">
+            <input id="answer-box" type="number" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
             <button class="btn btn-dark" data-type="submit">Submit Answer</button>
         </div>
     </div>
