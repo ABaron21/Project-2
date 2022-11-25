@@ -130,9 +130,23 @@ CSS
 
 ### JavaScript Jest Tests
 
-To run the tests within the command line type 'npm test' or run coverage as shown below type in the CLI 'npm test -- --coverage'.
+To run the tests within the command line type 'npm test' or run coverage as shown below type in the CLI 'npm test -- --coverage'. Jest is the testing stage before/during & after coding javascript depending upon how you want to construct your, for this production jest was used before/during to conform with current best practice of TDD(Test Driven Development) where the javascript functionality is driven from the jest tests that have been designed and built.
+
+Alongside Jest there are 2 different forms of testing (Manual or Automatic), Automatic testing is when tests have been built to run continously behind the scenes to ensure that the code that doesn't require any user interaction runs smoothly. Manual testing on the other hand is testing functions that play the part with user interaction and ensuring it works as intended such as the code returning something to the user based on the input they've given.
 
 ![jest-testing](docx/screenshots/jest-screenshot.PNG)
+
+### JSHint Testing
+
+#### Mathemania
+![mathemania-jshint](docx/screenshots/code-validations/mathemania-jshint.PNG)
+
+#### MemoryCirle
+![memorycircle-jshint](docx/screenshots/code-validations/memorycircle-jshint.PNG)
+
+#### MemoryButtons
+![memorybuttons-jshint](docx/screenshots/code-validations/memorybuttons-jshint.PNG)
+
 
 ## User Stories
 
@@ -196,6 +210,11 @@ This issue didn't show up until the website was deployed to GitHub Pages, when a
 
 Resolving this issue was a case of throughly checking through the form element within contact.html as well as the sendEmail.js file, after checking the code the cause of the issue was within the form attributes and it was fixed by removing the method attribute and taking out the 'return' in the onsubmit click attribute.
 
+### Mathemania 'e' being accepted as an input
+Within the Mathemania game, users were able to input the letter e into the answer box. This was the result of HTML's number input allowing the letter e as it represents the exponetial constant in mathematical logic.
+
+A simple fix for this issue with help from Stackoverflow, all that was needed was to add this line "onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" into the attributes for the HTML input tag.
+
 ## Screens
 Each web pages has been tested to make sure that they are fully responsive across all screen sizes beginning with mobile devices and increasing upwards to tablets, laptops and finally desktops as it's the largest screen size expected for a browser window.
 
@@ -207,7 +226,7 @@ Two versions on deployment:
 
 ----
 ## Credits
-
+[Stackoverflow](https://stackoverflow.com/questions/31706611/why-does-the-html-input-with-type-number-allow-the-letter-e-to-be-entered-in) - Assisting with the Mathemania input field bug.
 ### External Code
 * Bootstrap:
     * Collapsable Nav Bar

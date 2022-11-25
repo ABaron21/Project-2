@@ -11,7 +11,7 @@ let game = {
     choices: ["circle1", "circle2", "circle3", "circle4"],
     turnsProcessing: false,
     previousCircle: ""
-}
+};
 
 /*
 *   Sets the score to reach based on the difficulty selected and shows indication of which difficulty is selected.
@@ -24,19 +24,19 @@ function circle_diff(diff) {
             document.getElementById("easy-btn").classList.add("btn--active");
             document.getElementById("medium-btn").classList.remove("btn--active");
             document.getElementById("hard-btn").classList.remove("btn--active");
-            break
+            break;
         case "medium":
             game.max_score = 20;
             document.getElementById("easy-btn").classList.remove("btn--active");
             document.getElementById("medium-btn").classList.add("btn--active");
             document.getElementById("hard-btn").classList.remove("btn--active");
-            break
+            break;
         case "hard":
             game.max_score = 30;
             document.getElementById("easy-btn").classList.remove("btn--active");
             document.getElementById("medium-btn").classList.remove("btn--active");
             document.getElementById("hard-btn").classList.add("btn--active");
-            break
+            break;
         default:
             return "No difficulty selected";
     }
@@ -57,7 +57,7 @@ function newGame() {
                     game.moves.push(move);
                     userTurn();
                 }
-            })
+            });
             circle.setAttribute("data-listener", "true");
         }
     }
@@ -75,7 +75,7 @@ function lightUp(circ) {
     document.getElementById(circ).classList.add("light");
     setTimeout(() => {
         document.getElementById(circ).classList.remove("light");
-    }, 400)
+    }, 400);
 }
 
 /*

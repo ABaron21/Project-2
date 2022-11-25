@@ -11,7 +11,7 @@ let game = {
     turn: 0,
     turnInProcess: false,
     previousButton: ""
-}
+};
 
 /*
 *   Sets the score to reach based on the difficulty selected and shows indication of which difficulty is selected.
@@ -24,19 +24,19 @@ function btn_diff(diff) {
             document.getElementById("easy-btn").classList.add("btn--active");
             document.getElementById("medium-btn").classList.remove("btn--active");
             document.getElementById("hard-btn").classList.remove("btn--active");
-            break
+            break;
         case "medium":
             game.max_score = 30;
             document.getElementById("easy-btn").classList.remove("btn--active");
             document.getElementById("medium-btn").classList.add("btn--active");
             document.getElementById("hard-btn").classList.remove("btn--active");
-            break
+            break;
         case "hard":
             game.max_score = 45;
             document.getElementById("easy-btn").classList.remove("btn--active");
             document.getElementById("medium-btn").classList.remove("btn--active");
             document.getElementById("hard-btn").classList.add("btn--active");
-            break
+            break;
         default:
             return "No difficulty selected";
     }
@@ -57,7 +57,7 @@ function beginGame(){
                     game.userMoves.push(move);
                     playersTurn();
                 }
-            })
+            });
             button.setAttribute("data-listener", "true");
         }
     }
@@ -75,7 +75,7 @@ function lightUp(btn) {
     document.getElementById(btn).classList.add("light");
     setTimeout(() => {
         document.getElementById(btn).classList.remove("light");
-    }, 400)
+    }, 400);
 }
 
 /*
@@ -105,7 +105,7 @@ function playersTurn() {
             addTurn();
         }
     } else {
-        $('#incorrect-modal').modal('show')
+        $('#incorrect-modal').modal('show');
     }
 }
 
@@ -116,7 +116,7 @@ function displayScore(){
 
 function checkScore() {
     if (game.score === game.max_score) {
-        $('#success-modal').modal('show')
+        $('#success-modal').modal('show');
     }
 }
 

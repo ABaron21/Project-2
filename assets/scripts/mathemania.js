@@ -1,7 +1,3 @@
-/*  
-*    Sets the game difficulty to easy and game type to add,
-*    as well as adding event listeners to the game type buttons upon the web page loading.
-*/
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
@@ -20,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(event.key === "Enter"){
             checkAnswer();
         }
-    })
+    });
     game("add");
 });
 
@@ -28,7 +24,7 @@ let currentGame = {
     difficulty: "",
     factor1: 0,
     factor2: 0,
-}
+};
 
 /*
 *   Sets the factor used for the random number generator based on the difficulty selected, resets the scores and shows indication of which difficulty is selected.
@@ -101,13 +97,13 @@ function calculateCorrectAnswer() {
     let operator = document.getElementById('operator').innerText;
 
     if(operator === "+"){
-        return [operand1 + operand2, "add"]
+        return [operand1 + operand2, "add"];
     }else if(operator === "x"){
-        return [operand1 * operand2, "multiply"]
+        return [operand1 * operand2, "multiply"];
     }else if(operator === "-"){
-        return [operand1 - operand2, "subtract"]
+        return [operand1 - operand2, "subtract"];
     }else if(operator === "/"){
-        return [operand1/operand2, "divide"]
+        return [operand1/operand2, "divide"];
     }
 }
 
@@ -166,4 +162,4 @@ function displayDivision(operand1, operand2){
 	}
 }
 
-module.exports = {currentGame, game, diff_setter}
+module.exports = {currentGame, game, diff_setter};
