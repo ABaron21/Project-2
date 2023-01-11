@@ -1,5 +1,5 @@
 # Tribal Minds
-![responive-image](docx/screenshots/responsive-screenshot.PNG)
+![responive-image](docx/screenshots/responsive-screenshot.png)
 Click here to vist the Tribal Minds website https://abaron21.github.io/Tribal_Minds
 
 ## Project Purpose
@@ -59,7 +59,6 @@ Memory Game(Circle)
 Memory Game(Buttons)
 ![memory-game-buttons](docx/wireframes/memory-game-buttons.png)
 
-
 ## Technology Used
 Balsamiq Wireframes - Used to build/create the visual outline for the different web pages that the website consists of.
 
@@ -86,67 +85,53 @@ GitPages - Used to deploy the final development.
 ### Landing Page
 HTML
 
-![index-html](docx/screenshots/code-validations/landing-page-html-validation.PNG)
+![index-html](docx/screenshots/code-validations/landing-page-html-validation.png)
 
 CSS
 
-![index-css](docx/screenshots/code-validations/landing-page-css-validation.PNG)
+![index-css](docx/screenshots/code-validations/landing-page-css-validation.png)
 
 ### Contact Page
 HTML
 
-![contact-html](docx/screenshots/code-validations/contact-page-html-validation.PNG)
+![contact-html](docx/screenshots/code-validations/contact-page-html-validation.png)
 
 CSS
 
-![contact-css](docx/screenshots/code-validations/contact-page-css-validation.PNG)
+![contact-css](docx/screenshots/code-validations/contact-page-css-validation.png)
 
 ### MatheMania Page
 HTML
 
-![mathemania-html](docx/screenshots/code-validations/mathemania-html-validation.PNG)
+![mathemania-html](docx/screenshots/code-validations/mathemania-html-validation.png)
 
 CSS
 
-![mathemania-css](docx/screenshots/code-validations/mathemania-css-validation.PNG)
+![mathemania-css](docx/screenshots/code-validations/mathemania-css-validation.png)
 
 ### MemoryMania(Circles) Page
 HTML
 
-![memorycircle-html](docx/screenshots/code-validations/memorycircle-html-validation.PNG)
+![memorycircle-html](docx/screenshots/code-validations/memorycircle-html-validation.png)
 
 CSS
 
-![memorycircle-css](docx/screenshots/code-validations/memorycircle-css-validation.PNG)
+![memorycircle-css](docx/screenshots/code-validations/memorycircle-css-validation.png)
 
 ### MemoryMania(Buttons) Page
 HTML
 
-![memorybuttons-html](docx/screenshots/code-validations/memorybuttons-html-validation.PNG)
+![memorybuttons-html](docx/screenshots/code-validations/memorybuttons-html-validation.png)
 
 CSS
 
-![memorybuttons-css](docx/screenshots/code-validations/memorybuttons-css-validation.PNG)
+![memorybuttons-css](docx/screenshots/code-validations/memorybuttons-css-validation.png)
 
 ### JavaScript Jest Tests
 
-To run the tests within the command line type 'npm test' or run coverage as shown below type in the CLI 'npm test -- --coverage'. Jest is the testing stage before/during & after coding javascript depending upon how you want to construct your, for this production jest was used before/during to conform with current best practice of TDD(Test Driven Development) where the javascript functionality is driven from the jest tests that have been designed and built.
+To run the tests within the command line type 'npm test' or run coverage as shown below type in the CLI 'npm test -- --coverage'.
 
-Alongside Jest there are 2 different forms of testing (Manual or Automatic), Automatic testing is when tests have been built to run continously behind the scenes to ensure that the code that doesn't require any user interaction runs smoothly. Manual testing on the other hand is testing functions that play the part with user interaction and ensuring it works as intended such as the code returning something to the user based on the input they've given.
-
-![jest-testing](docx/screenshots/jest-screenshot.PNG)
-
-### JSHint Testing
-
-#### Mathemania
-![mathemania-jshint](docx/screenshots/code-validations/mathemania-jshint.PNG)
-
-#### MemoryCirle
-![memorycircle-jshint](docx/screenshots/code-validations/memorycircle-jshint.PNG)
-
-#### MemoryButtons
-![memorybuttons-jshint](docx/screenshots/code-validations/memorybuttons-jshint.PNG)
-
+![jest-testing](docx/screenshots/jest-screenshot.png)
 
 ## User Stories
 
@@ -155,18 +140,18 @@ Alongside Jest there are 2 different forms of testing (Manual or Automatic), Aut
 2. Look at the top right of the page.
 3. (Mobile device) Click the hamburger icon at the top right of the screen.
 
-![userstory1-mobile](docx/screenshots/user-stories/us1-mobile.PNG)
-![userstory1-tablet](docx/screenshots/user-stories/us1-tablet.PNG)
-![userstory1-desktop](docx/screenshots/user-stories/us1-desktop.PNG)
+![userstory1-mobile](docx/screenshots/user-stories/us1-mobile.png)
+![userstory1-tablet](docx/screenshots/user-stories/us1-tablet.png)
+![userstory1-desktop](docx/screenshots/user-stories/us1-desktop.png)
 
 ### Seeing feedback other users have given:
 1. Navigate to the contact page.
 2. Read the second section on the page.
 3. (Small devices) Scroll down to the second section.
 
-![userstory2-mobile](docx/screenshots/user-stories/us2-mobile.PNG)
-![userstory2-tablet](docx/screenshots/user-stories/us2-tablet.PNG)
-![userstory2-desktop](docx/screenshots/user-stories/us2-desktop.PNG)
+![userstory2-mobile](docx/screenshots/user-stories/us2-mobile.png)
+![userstory2-tablet](docx/screenshots/user-stories/us2-tablet.png)
+![userstory2-desktop](docx/screenshots/user-stories/us2-desktop.png)
 
 ### Sending feedback to the developer:
 1. Navigate to the contact page.
@@ -174,46 +159,41 @@ Alongside Jest there are 2 different forms of testing (Manual or Automatic), Aut
 3. Fill in the name, email and message input fields.
 4. Click the send button.
 
-![userstory3](docx/screenshots/user-stories/us3.PNG)
+![userstory3](docx/screenshots/user-stories/us3.png)
 
 ### Selecting a different version of MemoryMania:
 1. Click the play button under the MemoryMania heading.
 2. Select the radio button labelled with which version you want to play.
 3. Click play at the bottom of the modal.
 
-![userstory4-mobile](docx/screenshots/user-stories/us4-mobile.PNG)
-![userstory4-tablet](docx/screenshots/user-stories/us4-tablet.PNG)
-![userstory4-desktop](docx/screenshots/user-stories/us4-desktop.PNG)
+![userstory4-mobile](docx/screenshots/user-stories/us4-mobile.png)
+![userstory4-tablet](docx/screenshots/user-stories/us4-tablet.png)
+![userstory4-desktop](docx/screenshots/user-stories/us4-desktop.png)
 
 ### Switching difficulites in a game:
 1. Locate the 3 difficulty buttons on the screen/page.
 2. Click on the medium difficulty.
 3. The button will change once selected.
 
-![userstory5-mobile](docx/screenshots/user-stories/us5-mobile.PNG)
-![userstory5-tablet](docx/screenshots/user-stories/us5-tablet.PNG)
-![userstory5-desktop](docx/screenshots/user-stories/us5-desktop.PNG)
+![userstory5-mobile](docx/screenshots/user-stories/us5-mobile.png)
+![userstory5-tablet](docx/screenshots/user-stories/us5-tablet.png)
+![userstory5-desktop](docx/screenshots/user-stories/us5-desktop.png)
 
 ## Bugs
 
 ### JSDom Installing & Implementing
 This bug occurred closed to the beginning of the test driven development and the cause of this was because the jsdom test environment wasn't installed and imported properly into the test scripts.
 
-![jsdom-error](docx/screenshots/bugs/jsdom-error.PNG)
+![jsdom-error](docx/screenshots/bugs/jsdom-error.png)
 
 Fixing the issues was a simple solution of searching and reading through the documentation for the latest version of jest and jsdom test environment, then just following the steps shown to install and import the test environment.
 
 ### Sending Feedback Trigger 405 Error
 This issue didn't show up until the website was deployed to GitHub Pages, when a user would attempt to send feedback through the contact page and click the send button it would respond with a 405 'Method Not Allowed' response resulting in the user not being able to send feeback via emailJS.
 
-![feedback-error](docx/screenshots/bugs/feedback-bug.PNG)
+![feedback-error](docx/screenshots/bugs/feedback-bug.png)
 
 Resolving this issue was a case of throughly checking through the form element within contact.html as well as the sendEmail.js file, after checking the code the cause of the issue was within the form attributes and it was fixed by removing the method attribute and taking out the 'return' in the onsubmit click attribute.
-
-### Mathemania 'e' being accepted as an input
-Within the Mathemania game, users were able to input the letter e into the answer box. This was the result of HTML's number input allowing the letter e as it represents the exponetial constant in mathematical logic.
-
-A simple fix for this issue with help from Stackoverflow, all that was needed was to add this line "onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" into the attributes for the HTML input tag.
 
 ## Screens
 Each web pages has been tested to make sure that they are fully responsive across all screen sizes beginning with mobile devices and increasing upwards to tablets, laptops and finally desktops as it's the largest screen size expected for a browser window.
@@ -226,7 +206,7 @@ Two versions on deployment:
 
 ----
 ## Credits
-[Stackoverflow](https://stackoverflow.com/questions/31706611/why-does-the-html-input-with-type-number-allow-the-letter-e-to-be-entered-in) - Assisting with the Mathemania input field bug.
+
 ### External Code
 * Bootstrap:
     * Collapsable Nav Bar

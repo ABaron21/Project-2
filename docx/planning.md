@@ -1,5 +1,5 @@
 # Tribal Minds
-![responive-image](screenshots/responsive-screenshot.PNG)
+![responive-image](screenshots/responsive-screenshot.png)
 Click here to vist the Tribal Minds website https://abaron21.github.io/Tribal_Minds
 
 ## Project Purpose
