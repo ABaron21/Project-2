@@ -68,9 +68,23 @@ CSS
 
 ### JavaScript Jest Tests
 
-To run the tests within the command line type 'npm test' or run coverage as shown below type in the CLI 'npm test -- --coverage'.
+To run the tests within the command line type 'npm test' or run coverage as shown below type in the CLI 'npm test -- --coverage'. Jest is the testing stage before/during & after coding javascript depending upon how you want to construct your, for this production jest was used before/during to conform with current best practice of TDD(Test Driven Development) where the javascript functionality is driven from the jest tests that have been designed and built.
+
+Alongside Jest there are 2 different forms of testing (Manual or Automatic), Automatic testing is when tests have been built to run continously behind the scenes to ensure that the code that doesn't require any user interaction runs smoothly. Manual testing on the other hand is testing functions that play the part with user interaction and ensuring it works as intended such as the code returning something to the user based on the input they've given.
 
 ![jest-testing](screenshots/jest-screenshot.png)
+
+### JSHint Testing
+
+#### Mathemania
+![mathemania-jshint](docx/screenshots/code-validations/mathemania-jshint.PNG)
+
+#### MemoryCirle
+![memorycircle-jshint](docx/screenshots/code-validations/memorycircle-jshint.PNG)
+
+#### MemoryButtons
+![memorybuttons-jshint](docx/screenshots/code-validations/memorybuttons-jshint.PNG)
+
 
 ## User Stories
 
