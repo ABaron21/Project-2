@@ -77,13 +77,13 @@ Alongside Jest there are 2 different forms of testing (Manual or Automatic), Aut
 ### JSHint Testing
 
 #### Mathemania
-![mathemania-jshint](docx/screenshots/code-validations/mathemania-jshint.PNG)
+![mathemania-jshint](docx/screenshots/code-validations/mathemania-jshint.png)
 
 #### MemoryCirle
-![memorycircle-jshint](docx/screenshots/code-validations/memorycircle-jshint.PNG)
+![memorycircle-jshint](docx/screenshots/code-validations/memorycircle-jshint.png)
 
 #### MemoryButtons
-![memorybuttons-jshint](docx/screenshots/code-validations/memorybuttons-jshint.PNG)
+![memorybuttons-jshint](docx/screenshots/code-validations/memorybuttons-jshint.png)
 
 
 ## User Stories
