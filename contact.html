@@ -91,11 +91,11 @@
         </div>
         <div class="feedback-section">
             <form onsubmit="return sendMail(this)">
-                <div class="col-12 form-field"><input type="text" id="feedback_name" placeholder="Name"></div>
-                <div class="col-12 form-field"><input type="email" id="feedback_email" placeholder="Email Address">
+                <div class="col-12 form-field"><input type="text" id="feedback_name" placeholder="Name" required></div>
+                <div class="col-12 form-field"><input type="email" id="feedback_email" placeholder="Email Address" required>
                 </div>
                 <div class="col-12 form-field"><textarea id="feedback_message" placeholder="Enter your message" rows="5"
-                        cols="40"></textarea></div>
+                        cols="40" required></textarea></div>
                 <div class="col-12"><button type="submit" class="btn btn-dark" data-toggle="modal"
                         data-target="#email-sent">Send Feedback</button></div>
             </form>
